@@ -4,7 +4,7 @@ enough.css is a tiny (233B minified) CSS style sheet with most of the styling yo
 
 ![motherfuckingwebsite.com with readable.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
-## Features
+## enough.css
 
 - Increases the font size to 18px
 - Uses `-apple-system` if available, or falls back to a sans-serif font
