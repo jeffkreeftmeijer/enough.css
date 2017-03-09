@@ -2,5 +2,7 @@ code{
   font: 0.8em Monaco, monospace;
 }
 pre{
-  overflow-x: auto
+  background-color: ghostwhite;
+  overflow-x: auto;
+  padding: 1em;
 }
