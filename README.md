@@ -19,9 +19,15 @@ enough.css is a tiny (233B minified) CSS style sheet with most of the styling yo
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
 
+## enough.kbd.css
+
+- Uses an 0.8 em size, and inherits the font-family from the body for `<kbd>` tags
+- Adds a rounded, 1 pixel lightgrey border and some shadow for `kbd` tags
+- Adds padding to make single-letter `kbd` tags square-ish
+
 ## enough.min.css
 
 ```
 $ npm install -g minifier
-$ minify enough.css enough.code.css --output enough.min.css
+$ minify enough.css enough.code.css enough.kbd.css --output enough.min.css
 ```
