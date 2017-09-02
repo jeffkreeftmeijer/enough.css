@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (233B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and It'd make http://motherfuckingwebsite.com look like this:
+enough.css is a tiny (366B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and It'd make http://motherfuckingwebsite.com look like this:
 
 ![motherfuckingwebsite.com with readable.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
