@@ -18,3 +18,10 @@ enough.css is a tiny (233B minified) CSS style sheet with most of the styling yo
 - Wraps lines in `<pre>` tags
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
+
+## enough.min.css
+
+```
+$ npm install -g minifier
+$ minify enough.css enough.code.css --output enough.min.css
+```
