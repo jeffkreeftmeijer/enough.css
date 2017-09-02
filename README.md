@@ -31,3 +31,7 @@ enough.css is a tiny (233B minified) CSS style sheet with most of the styling yo
 $ npm install -g minifier
 $ minify enough.css enough.code.css enough.kbd.css --output enough.min.css
 ```
+
+## License
+
+MIT
