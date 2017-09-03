@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (366B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and It'd make http://motherfuckingwebsite.com look like this:
+enough.css is a tiny (337B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and It'd make http://motherfuckingwebsite.com look like this:
 
 ![motherfuckingwebsite.com with readable.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
@@ -22,7 +22,7 @@ enough.css is a tiny (366B minified) CSS style sheet with most of the styling yo
 ## enough.kbd.css
 
 - Uses an 0.8 em size, and inherits the font-family from the body for `<kbd>` tags
-- Adds a rounded, 1 pixel lightgrey border and some shadow for `kbd` tags
+- Adds a rounded, 1 pixel `lightgrey` border for `kbd` tags
 - Adds padding to make single-letter `kbd` tags square-ish
 
 ## enough.min.css
