@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (343B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and It'd make http://motherfuckingwebsite.com look like this:
+enough.css is a tiny (331B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and It'd make http://motherfuckingwebsite.com look like this:
 
 ![motherfuckingwebsite.com with readable.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
@@ -28,8 +28,8 @@ enough.css is a tiny (343B minified) CSS style sheet with most of the styling yo
 ## enough.min.css
 
 ```
-$ npm install -g minifier
-$ minify enough.css enough.code.css enough.kbd.css --output enough.min.css
+$ npm install -g csso-cli
+$ cat enough.css enough.code.css enough.kbd.css | csso -o enough.min.css
 ```
 
 ## License
