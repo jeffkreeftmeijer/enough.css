@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (331B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and it'd make http://motherfuckingwebsite.com look like this:
+enough.css is a tiny (391B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and it'd make http://motherfuckingwebsite.com look like this:
 
 ![motherfuckingwebsite.com with enough.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
@@ -25,11 +25,17 @@ enough.css is a tiny (331B minified) CSS style sheet with most of the styling yo
 - Adds a rounded, 1 pixel `lightgrey` border for `kbd` tags
 - Adds padding to make single-letter `kbd` tags square-ish
 
+## enough.blockquote.css
+
+- Uses an 1.17 em size (like `<h3>`) for `<blockquote`> tags
+- Uses `slategray` as the font color for `<blockquote`> tags
+- Uses italic type for `<blockquote`> tags
+
 ## enough.min.css
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.code.css enough.kbd.css | csso -o enough.min.css
+$ cat enough.css enough.code.css enough.kbd.css enough.blockquote.css | csso -o enough.min.css
 ```
 
 ## License
