@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (391B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and it'd make http://motherfuckingwebsite.com look like this:
+enough.css is a tiny (374B minified) CSS style sheet with most of the styling you'll need for that blog of yours. I use it on [mine](https://jeffkreeftmeijer.com), and it'd make http://motherfuckingwebsite.com look like this:
 
 ![motherfuckingwebsite.com with enough.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
@@ -27,8 +27,7 @@ enough.css is a tiny (391B minified) CSS style sheet with most of the styling yo
 
 ## enough.blockquote.css
 
-- Uses an 1.17 em size (like `<h3>`) for `<blockquote`> tags
-- Uses `slategray` as the font color for `<blockquote`> tags
+- Uses `dimgray` as the font color for `<blockquote`> tags
 - Uses italic type for `<blockquote`> tags
 
 ## enough.min.css
