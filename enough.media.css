@@ -1,0 +1,10 @@
+@media (max-width: 375px) {
+  body {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    font-size: 0.8em;
+  }
+}
