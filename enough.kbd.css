@@ -1,6 +1,5 @@
 kbd{
-  font-family: inherit;
-  font-size: 0.8em;
+  font: 0.8em Monaco, monospace;
   border: 1px solid lightgrey;
   padding: .1em .6em;
   border-radius: 3px;
