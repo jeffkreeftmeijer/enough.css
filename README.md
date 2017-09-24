@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (483B minified) CSS style sheet with most of the styling
+enough.css is a tiny (498B minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
@@ -30,8 +30,10 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.code.css
 
-- Uses an 0.8 em size, a 1.4 em line height and Menlo as the font in `<pre>`,
-  `<code>`, and `<kbd>` tags, or falls back to a monospace font
+- Uses a 0.8 em size and a 1.4 em line height in `<pre>`, `<code>` and `<kbd>`
+  tags
+- Uses SFMono (for connoisseurs) or Menlo, as the font in `<pre>`, `<code>`, and
+  `<kbd>` tags, or falls back to the system's monospace font.
 - Adds an x-overflow to `<pre>` tags, so long lines show horizontal scroll bars
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
