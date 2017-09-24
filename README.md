@@ -63,8 +63,3 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 $ npm install -g csso-cli
 $ cat enough.css enough.media.css enough.code.css enough.kbd.css enough.blockquote.css | csso -o enough.min.css
 ```
-
-## License
-
-MIT. Please [let me know](https://gist.github.com/jeffkreeftmeijer/362cfd02b8e9f73a435b13e763f28423#comments)
-if you use it for anything!
