@@ -32,8 +32,10 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 - Uses a 0.8 em size and a 1.4 em line height in `<pre>`, `<code>` and `<kbd>`
   tags
-- Uses SFMono (for connoisseurs) or Menlo, as the font in `<pre>`, `<code>`, and
-  `<kbd>` tags, or falls back to the system's monospace font.
+- Uses SFMono (for
+  [connoisseurs](https://github.com/jeffkreeftmeijer/enough.css/commit/d96b26347bf55c0061da5e434974191f3a2d67ed))
+  or Menlo, as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back to
+  the system's monospace font.
 - Adds an x-overflow to `<pre>` tags, so long lines show horizontal scroll bars
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
