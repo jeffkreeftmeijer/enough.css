@@ -1,5 +1,5 @@
 code,kbd,pre{
-  font: 0.8em Menlo, monospace;
+  font: 0.8em/1.4 Menlo, monospace;
 }
 pre code{
   font-size: 1em;
