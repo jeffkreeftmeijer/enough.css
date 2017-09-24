@@ -1,5 +1,8 @@
-code,kbd{
+code,kbd,pre{
   font: 0.8em Monaco, monospace;
+}
+pre code{
+  font-size: 1em;
 }
 pre{
   background-color: ghostwhite;
