@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (546B minified) CSS style sheet with most of the styling
+enough.css is a tiny (457B minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
@@ -40,13 +40,6 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color and a 3 pixel border radius to `<pre>`,
   `<code>` and `<kbd>` tags
-
-## enough.kbd.css
-
-- Uses an 0.8 em size and Monaco as the font in `<kbd>` tags, or falls back to a
-  monospace font
-- Adds a rounded, 1 pixel `lightgrey` border for `<kbd>` tags
-- Adds padding to make single-letter `<kbd>` tags square-ish
 
 ## enough.blockquote.css
 
