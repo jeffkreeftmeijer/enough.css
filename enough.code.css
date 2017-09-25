@@ -2,7 +2,7 @@ code,kbd,pre{
   font: 0.8em/1.4 SFMono-Regular, Monaco, monospace;
 }
 pre code{
-  font-size: 1em;
+  font: inherit;
 }
 pre{
   background-color: ghostwhite;
