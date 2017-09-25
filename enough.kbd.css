@@ -1,5 +1,5 @@
 kbd{
-  font: 0.8em Monaco, monospace;
+  font: 0.8em/1.4 SFMono-Regular, Monaco, monospace;
   border: 1px solid lightgrey;
   padding: .1em .6em;
   border-radius: 3px;

@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (500B minified) CSS style sheet with most of the styling
+enough.css is a tiny (477B minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
