@@ -2,6 +2,8 @@ code,kbd,pre{
   font: 0.8em/1.4 SFMono-Regular, Monaco, monospace;
   border-radius: 3px;
   background-color: ghostwhite;
+}
+code,kbd{
   padding: .2em .4em;
 }
 pre code{
