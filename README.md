@@ -43,7 +43,7 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.blockquote.css
 
-- Uses italic type for `<blockquote`> tags
+- Uses italic type for `<blockquote>` tags
 
 ## enough.media.css
 
@@ -56,5 +56,5 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.code.css enough.kbd.css enough.blockquote.css | csso -o enough.min.css
+$ cat enough.css enough.media.css enough.code.css enough.blockquote.css | csso -o enough.min.css
 ```
