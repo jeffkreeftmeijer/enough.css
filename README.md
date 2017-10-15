@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (439B minified) CSS style sheet with most of the styling
+enough.css is a tiny (455B minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
@@ -53,9 +53,13 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Uses an 0.8em body font size for a maximum body width of 320px (like 4.0"
   iPhones)
 
+## enough.media.css
+
+- Uses a 0.5em padding in table cells
+
 ## enough.min.css
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.code.css enough.blockquote.css | csso -o enough.min.css
+$ cat enough.css enough.media.css enough.code.css enough.blockquote.css enough.table.css | csso -o enough.min.css
 ```
