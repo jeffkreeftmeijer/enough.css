@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (427B minified) CSS style sheet with most of the styling
+enough.css is a tiny (439B minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
@@ -26,7 +26,9 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Uses `system-ui` if available, or falls back to a sans-serif font
 - Uses a 1.4 em `line-height` for body text, but doesn't touch headings
 - Makes the body 40 em wide with a padding of 1 em, and centers it
-- Adds a 100% `max-width` to images and videos, so they can't overflow
+- Adds a 100% `max-width` to images and videos, so they can't overflow.
+- Sets image height to `auto` to resize proportionally when width and height
+  are set
 
 ## enough.code.css
 
