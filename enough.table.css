@@ -1,3 +1,15 @@
-td{
+table{
+  width: 100%;
+}
+td, th{
   padding: 0.5em;
+}
+td:first-child, th:first-child{
+  padding-left: 0;
+}
+td:last-child, th:last-child{
+  padding-right: 0;
+}
+th{
+  text-align: left;
 }
