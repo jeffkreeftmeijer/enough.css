@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (621B minified) CSS style sheet with most of the styling
+enough.css is a tiny (678 minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
@@ -29,6 +29,10 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Adds a 100% `max-width` to images and videos, so they can't overflow.
 - Sets image height to `auto` to resize proportionally when width and height
   are set
+
+## enough.a.css
+
+- Removes underlines from `<a>` tags and only shows them on hover
 
 ## enough.code.css
 
@@ -74,5 +78,5 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.code.css enough.pre.css enough.blockquote.css enough.table.css | csso -o enough.min.css
+$ cat enough.css enough.media.css enough.a.css enough.code.css enough.pre.css enough.blockquote.css enough.table.css | csso -o enough.min.css
 ```
