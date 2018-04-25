@@ -1,4 +1,5 @@
 table{
+  border-collapse: collapse;
   font: inherit;
   width: 100%;
 }

@@ -1,6 +1,6 @@
 # enough.css
 
-enough.css is a tiny (596B minified) CSS style sheet with most of the styling
+enough.css is a tiny (621B minified) CSS style sheet with most of the styling
 you'll need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and
@@ -67,6 +67,7 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Adds a 100% `width` to tables.
 - Uses a 0.5em padding in table cells and headers without adding padding on the
   left and right side of the table.
+- Collapses the non-existing borders to remove the extra margins around cells
 - Left-aligns table headers.
 
 ## enough.min.css
