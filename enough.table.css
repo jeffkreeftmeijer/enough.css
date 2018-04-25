@@ -1,4 +1,5 @@
 table{
+  font: inherit;
   width: 100%;
 }
 td, th{
