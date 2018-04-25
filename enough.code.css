@@ -9,7 +9,3 @@ pre code{
   font: inherit;
   padding: 0;
 }
-pre{
-  overflow-x: auto;
-  padding: 1em;
-}

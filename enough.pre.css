@@ -1,0 +1,6 @@
+pre{
+  font: 0.8em/1.4 SF Mono, Monaco, monospace;
+  background-color: ghostwhite;
+  overflow-x: auto;
+  padding: 1em;
+}
