@@ -1,7 +1,12 @@
 # enough.css
 
-enough.css is a tiny (678 minified) CSS style sheet with most of the styling
-you'll need for that blog of yours.
+enough.css is a tiny CSS framework with most of the styling you need for that
+blog of yours.
+
+The base stylesheet is **153 bytes** minified. It comes with optional modules
+to (minimally) style links, code blocks, blockquotes and tables. It's responsive
+by default, but has a module to decrease font sizes on smaller screens for extra
+responsiveness. The whole package is **678 bytes** minified.
 
 > Websites aren't broken by default, they are functional, high-performing, and
 > accessible. You break them.
