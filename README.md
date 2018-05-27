@@ -41,19 +41,12 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.code.css
 
-- Uses a 0.8 em size and a 1.4 em line height in `<code>` and `<kbd>` tags
+- Uses a 0.8 em size and a 1.4 em line height in `<pre>`, `<code>` and `<kbd>`
+  tags
 - Uses SFMono (for
   [connoisseurs](https://github.com/jeffkreeftmeijer/enough.css/commit/d96b26347bf55c0061da5e434974191f3a2d67ed))
-  or Monaco, as the font in `<code>`, and `<kbd>` tags, or falls back to the
-  system's monospace font
-
-## enough.pre.css
-
-- Uses a 0.8 em size and a 1.4 em line height in `<pre>` tags
-- Uses SFMono (for
-  [connoisseurs](https://github.com/jeffkreeftmeijer/enough.css/commit/d96b26347bf55c0061da5e434974191f3a2d67ed))
-  or Monaco, as the font in `<pre>` tags, or falls back to the system's
-  monospace font.
+  or Monaco, as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back
+  to the system's monospace font
 - Adds an x-overflow to `<pre>` tags, so long lines show horizontal scroll bars
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
@@ -82,5 +75,5 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.a.css enough.code.css enough.pre.css enough.blockquote.css enough.table.css | csso -o enough.min.css
+$ cat enough.css enough.media.css enough.a.css enough.code.css enough.blockquote.css enough.table.css | csso -o enough.min.css
 ```

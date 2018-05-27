@@ -1,6 +1,11 @@
 code,kbd,pre{
   font: 0.8em/1.4 SF Mono, Monaco, monospace;
 }
+pre{
+  background-color: ghostwhite;
+  overflow-x: auto;
+  padding: 1em;
+}
 pre code{
   font: inherit;
 }
