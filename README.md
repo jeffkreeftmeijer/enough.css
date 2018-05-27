@@ -6,7 +6,7 @@ blog of yours.
 The base stylesheet is **118 bytes** minified. It comes with optional modules
 to (minimally) style links, code blocks, blockquotes and tables. It's responsive
 by default, but has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **646 bytes** minified.
+responsiveness. The whole package is **624 bytes** minified.
 
 > Websites aren't broken by default, they are functional, high-performing, and
 > accessible. You break them.

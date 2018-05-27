@@ -1,6 +1,3 @@
-a {
+a:not(:hover){
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
