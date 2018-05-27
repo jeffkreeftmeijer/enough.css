@@ -3,10 +3,10 @@
 enough.css is a tiny CSS framework with most of the styling you need for that
 blog of yours.
 
-The base stylesheet is **155 bytes** minified. It comes with optional modules
+The base stylesheet is **118 bytes** minified. It comes with optional modules
 to (minimally) style links, code blocks, blockquotes and tables. It's responsive
 by default, but has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **683 bytes** minified.
+responsiveness. The whole package is **646 bytes** minified.
 
 > Websites aren't broken by default, they are functional, high-performing, and
 > accessible. You break them.
@@ -29,7 +29,7 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 - Increases the font size to 18px
 - Uses `system-ui` if available, or falls back to a sans-serif font
-- Uses a 1.4 em `line-height` for body text, but doesn't touch headings
+- Uses a 1.4 em `line-height`
 - Makes the body 40 em wide with 1 em left- and right paddings, and centers it
 - Adds a 100% `max-width` to images and videos, so they can't overflow.
 - Sets image height to `auto` to resize proportionally when width and height
