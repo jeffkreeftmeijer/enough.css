@@ -4,9 +4,9 @@ enough.css is a tiny CSS framework with most of the styling you need for that
 blog of yours.
 
 The base stylesheet is **118 bytes** minified. It comes with optional modules
-to (minimally) style code blocks, blockquotes and tables. It's responsive by
-default, but has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **545 bytes** minified.
+to (minimally) style code blocks and tables. It's responsive by default, but
+has a module to decrease font sizes on smaller screens for extra
+responsiveness. The whole package is **516 bytes** minified.
 
 > Websites aren't broken by default, they are functional, high-performing, and
 > accessible. You break them.
@@ -47,10 +47,6 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Adds a 1 em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
 
-## enough.blockquote.css
-
-- Uses italic type for `<blockquote>` tags
-
 ## enough.media.css
 
 - Uses an 0.9em body font size for a maximum body width of 375px (like 4.7"
@@ -71,5 +67,5 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.code.css enough.blockquote.css enough.table.css | csso -o enough.min.css
+$ cat enough.css enough.media.css enough.code.css enough.table.css | csso -o enough.min.css
 ```
