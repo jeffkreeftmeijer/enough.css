@@ -6,7 +6,7 @@ blog of yours.
 The base stylesheet is **118 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **516 bytes** minified.
+responsiveness. The whole package is **419 bytes** minified.
 
 > Websites aren't broken by default, they are functional, high-performing, and
 > accessible. You break them.
@@ -56,12 +56,9 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.table.css
 
-- Inherits the parent's font size
 - Adds a 100% `width` to tables.
-- Uses a 0.5em padding in table cells and headers without adding padding on the
-  left and right side of the table.
-- Collapses the non-existing borders to remove the extra margins around cells
-- Left-aligns table headers.
+- Uses a 0.5em padding in table cells
+- Adds collapsed, 1px borders
 
 ## enough.min.css
 
