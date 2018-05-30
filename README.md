@@ -4,9 +4,9 @@ enough.css is a tiny CSS framework with most of the styling you need for that
 blog of yours.
 
 The base stylesheet is **118 bytes** minified. It comes with optional modules
-to (minimally) style links, code blocks, blockquotes and tables. It's responsive
-by default, but has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **580 bytes** minified.
+to (minimally) style code blocks, blockquotes and tables. It's responsive by
+default, but has a module to decrease font sizes on smaller screens for extra
+responsiveness. The whole package is **545 bytes** minified.
 
 > Websites aren't broken by default, they are functional, high-performing, and
 > accessible. You break them.
@@ -34,10 +34,6 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 - Adds a 100% `max-width` to images and videos, so they can't overflow.
 - Sets image height to `auto` to resize proportionally when width and height
   are set
-
-## enough.a.css
-
-- Removes underlines from `<a>` tags and only shows them on hover
 
 ## enough.code.css
 
@@ -75,5 +71,5 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ```
 $ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.a.css enough.code.css enough.blockquote.css enough.table.css | csso -o enough.min.css
+$ cat enough.css enough.media.css enough.code.css enough.blockquote.css enough.table.css | csso -o enough.min.css
 ```
