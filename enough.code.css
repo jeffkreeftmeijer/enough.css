@@ -4,6 +4,6 @@ code,kbd,pre{
 pre{
   background-color: ghostwhite;
   font-size: 0.9em;
-  overflow-x: auto;
+  overflow: auto;
   padding: 1em;
 }
