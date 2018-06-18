@@ -3,14 +3,14 @@
 enough.css is a tiny CSS framework with most of the styling you need for that
 blog of yours.
 
+> Websites aren't broken by default, they are functional, high-performing, and
+> accessible. You break them.
+&mdash; [http://motherfuckingwebsite.com](http://motherfuckingwebsite.com)
+
 The base stylesheet is **118 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
 responsiveness. The whole package is **408 bytes** minified.
-
-> Websites aren't broken by default, they are functional, high-performing, and
-> accessible. You break them.
-&mdash; [http://motherfuckingwebsite.com](http://motherfuckingwebsite.com)
 
 ![motherfuckingwebsite.com with enough.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
 
