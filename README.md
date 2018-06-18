@@ -12,7 +12,7 @@ to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
 responsiveness. The whole package is **408 bytes** minified.
 
-![motherfuckingwebsite.com with enough.css](https://gist.github.com/jeffkreeftmeijer/6d0d7e76064b4db628a0ad9b7fcf3fee/raw/motherfuckingwebsite.png)
+[![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
 It's an experiment to see how little CSS a blog can get away with while still
 looking good and being readable on big and small screens. It styles pages
