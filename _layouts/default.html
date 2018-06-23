@@ -3,9 +3,70 @@
   <head>
     <meta charset="utf-8"/>
     <title>enough.css: a tiny CSS style sheet with most of the styling you'll need for that blog of yours.</title>
-    <link rel="stylesheet" href="enough.min.css"/>
+    <link rel="stylesheet" href="enough.css"/>
+    <link rel="stylesheet" href="enough.media.css"/>
+    <link rel="stylesheet" href="enough.code.css"/>
+    <link rel="stylesheet" href="enough.table.css"/>
   </head>
   <body>
     {{ content }}
+
+    <form>
+      <strong>enough.css</strong> <small>Interactive Demo™</small>
+
+      <div>
+        <label for="enough.css">
+          <input type="checkbox" id="enough.css" checked> enough.css
+        </label>
+
+        <label for="enough.media.css">
+          <input type="checkbox" id="enough.media.css" checked> enough.media.css
+        </label>
+
+        <label for="enough.code.css">
+          <input type="checkbox" id="enough.code.css" checked> enough.code.css
+        </label>
+
+        <label for="enough.table.css">
+          <input type="checkbox" id="enough.table.css" checked> enough.table.css
+        </label>
+      </div>
+    </form>
   </body>
 </html>
+
+<style>
+  body{
+    padding-bottom: 2em;
+  }
+
+  form{
+    position: fixed;
+    padding: 0.5em;
+    background-color: black;
+    color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font: 14px system-ui, sans-serif;
+  }
+
+  form div{
+    display: inline-block;
+    float: right;
+  }
+
+  label{
+    display: inline-block;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('input').forEach(
+    function(input) {
+      input.onchange = function(event) {
+        document.querySelector('link[href="' + event.target.id + '"]').disabled = !event.target.checked
+      }
+    }
+  )
+</script>
