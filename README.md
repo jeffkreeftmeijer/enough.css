@@ -23,7 +23,7 @@ tags. These are included in `enough.min.css` by default, but you can build your
 own to save some bytes if your project doesn't need everything.
 
 Some of the rules are duplicated across modules so they don't depend on each
-other, but [csso](https://github.com/css/csso) takes them out when minifying.
+other, but [cssnano](https://cssnano.co) takes them out when minifying.
 
 ## enough.css
 
@@ -63,6 +63,6 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 ## enough.min.css
 
 ```
-$ npm install -g csso-cli
-$ cat enough.css enough.media.css enough.code.css enough.table.css | csso -o enough.min.css
+$ npm install cssnano-cli
+$ cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
 ```
