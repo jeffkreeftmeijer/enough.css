@@ -10,7 +10,7 @@ blog of yours.
 The base stylesheet is **118 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **408 bytes** minified.
+responsiveness. The whole package is **411 bytes** minified.
 
 [![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -37,7 +37,7 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.code.css
 
-- Uses a 0.9 em font-size in `<pre>` tags
+- Uses a `smaller` font-size in `<pre>` tags
 - Uses SFMono (for
   [connoisseurs](https://github.com/jeffkreeftmeijer/enough.css/commit/d96b26347bf55c0061da5e434974191f3a2d67ed))
   or Monaco, as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back
