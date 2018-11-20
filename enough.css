@@ -1,7 +1,7 @@
 body{
-  font: 18px/1.4 system-ui, sans-serif;
+  font: 22px/1.6 system-ui, sans-serif;
   margin: auto;
-  max-width: 40em;
+  max-width: 35em;
   padding: 0 1em;
 }
 img, video{

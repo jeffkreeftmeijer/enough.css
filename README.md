@@ -10,7 +10,7 @@ blog of yours.
 The base stylesheet is **118 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **411 bytes** minified.
+responsiveness. The whole package is **458 bytes** minified.
 
 [![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -27,10 +27,10 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.css
 
-- Increases the font size to 18px
+- Increases the font size to 22px
 - Uses `system-ui` if available, or falls back to a sans-serif font
-- Uses a 1.4 em `line-height`
-- Makes the body 40 em wide with 1 em left- and right paddings, and centers it
+- Uses a 1.6 em `line-height`
+- Makes the body 35 em wide with 1 em left- and right paddings, and centers it
 - Adds a 100% `max-width` to images and videos, so they can't overflow.
 - Sets image height to `auto` to resize proportionally when width and height
   are set
@@ -48,10 +48,11 @@ other, but [csso](https://github.com/css/csso) takes them out when minifying.
 
 ## enough.media.css
 
-- Uses an 0.9em body font size for a maximum body width of 375px (like 4.7"
-  iPhones)
-- Uses an 0.8em body font size for a maximum body width of 320px (like 4.0"
-  iPhones)
+| Maximum viewport width | Body font size | Max. viewport calculation |
+|------------------------|----------------|---------------------------|
+| 1140px                 | 20px           | (35em + 2em) × 22px × 1.4 |
+| 740px                  | 18px           | (35em + 2em) × 20px       |
+| 466px                  | 16px           | (35em + 2em) × 18px × 0.7 |
 
 ## enough.table.css
 
