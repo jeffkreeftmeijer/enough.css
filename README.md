@@ -29,8 +29,8 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 
 - Increases the font size to 22px
 - Uses `system-ui` if available, or falls back to a sans-serif font
-- Uses a 1.6 em `line-height`
-- Makes the body 35 em wide with 1 em left- and right paddings, and centers it
+- Uses a 1.6em `line-height`
+- Makes the body 35em wide with 1em left- and right paddings, and centers it
 - Adds a 100% `max-width` to images and videos, so they can't overflow.
 - Sets image height to `auto` to resize proportionally when width and height
   are set
@@ -43,7 +43,7 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
   or Monaco, as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back
   to the system's monospace font
 - Adds an overflow to `<pre>` tags so long lines show horizontal scroll bars
-- Adds a 1 em padding to `<pre>` tags
+- Adds a 1em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
 
 ## enough.media.css
