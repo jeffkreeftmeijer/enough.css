@@ -66,3 +66,8 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 $ npm install cssnano-cli
 $ cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
 ```
+
+---
+
+- [Interactive Demo™](https://jeffkreeftmeijer.github.io/enough.css)
+- [Code](https://github.com/jeffkreeftmeijer/enough.css)
