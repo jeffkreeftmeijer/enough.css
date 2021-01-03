@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "cssnano-cli": "^1.0.5"
+  }
+}
