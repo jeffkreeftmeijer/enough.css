@@ -7,10 +7,10 @@ blog of yours.
 > accessible. You break them.
 &mdash; [http://motherfuckingwebsite.com](http://motherfuckingwebsite.com)
 
-The base stylesheet is **118 bytes** minified. It comes with optional modules
+The base stylesheet is **183 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **458 bytes** minified.
+responsiveness. The whole package is **463 bytes** minified.
 
 [![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -38,9 +38,8 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 ## enough.code.css
 
 - Uses a `smaller` font-size in `<pre>` tags
-- Uses SFMono (for
-  [connoisseurs](https://github.com/jeffkreeftmeijer/enough.css/commit/d96b26347bf55c0061da5e434974191f3a2d67ed))
-  or Monaco, as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back
+- Uses `ui-monospace` (which is SF Mono on [Safari ≥ 13.1](https://caniuse.com/extended-system-fonts))
+  or Monaco as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back
   to the system's monospace font
 - Adds an overflow to `<pre>` tags so long lines show horizontal scroll bars
 - Adds a 1em padding to `<pre>` tags
