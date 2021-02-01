@@ -1,13 +1,14 @@
-:root{
-  color-scheme: light dark;
-}
-
 @media (prefers-color-scheme: dark) {
-  a:link{
-    color: rgb(90, 200, 250);
+  a:link:not(:active){
+    color: #0f9bff;
   }
 
-  a:visited{
-    color: rgb(200, 90, 250);
+  a:visited:not(:active){
+    color: #c276e5;
+  }
+
+  hr{
+    border-style: solid;
+    border-color: #000 #191919 #191919 #000;
   }
 }
