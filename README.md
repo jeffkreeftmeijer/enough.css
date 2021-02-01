@@ -10,7 +10,7 @@ blog of yours.
 The base stylesheet is **183 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **463 bytes** minified.
+responsiveness. The whole package is **587 bytes** minified.
 
 [![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -45,6 +45,13 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 - Adds a 1em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
 
+## enough.dark.css
+
+- Set `color-scheme` to `light dark` on `:root` to  allow the browser to swap
+  to light-on-dark based on the user's preferences
+- updates the link (`a:link`) and visited link (`a:visited`) colors to make
+  sure they remain legible on dark backgrounds.
+
 ## enough.media.css
 
 | Maximum viewport width | Body font size | Max. viewport calculation |
@@ -63,7 +70,7 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 
 ```
 $ npm install
-$ cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
+$ cat enough.css enough.code.css enough.dark.css enough.media.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
 ```
 
 ---
