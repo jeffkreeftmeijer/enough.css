@@ -1,0 +1,13 @@
+:root{
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  a:link{
+    color: rgb(90, 200, 250);
+  }
+
+  a:visited{
+    color: rgb(200, 90, 250);
+  }
+}
