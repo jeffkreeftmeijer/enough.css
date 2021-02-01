@@ -47,10 +47,10 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 
 ## enough.dark.css
 
-- Set `color-scheme` to `light dark` on `:root` to  allow the browser to swap
-  to light-on-dark based on the user's preferences
-- updates the link (`a:link`) and visited link (`a:visited`) colors to make
+- Updates the link (`a:link`) and visited link (`a:visited`) colors to make
   sure they remain legible on dark backgrounds.
+- Updates the `<hr>` colors to darker grays to make them blend in on dark
+  backgrounds.
 
 ## enough.media.css
 
