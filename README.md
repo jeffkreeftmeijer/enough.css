@@ -10,7 +10,7 @@ blog of yours.
 The base stylesheet is **183 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **587 bytes** minified.
+responsiveness. The whole package is **678 bytes** minified.
 
 [![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
