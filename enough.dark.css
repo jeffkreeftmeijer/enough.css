@@ -9,6 +9,6 @@
 
   hr{
     border-style: solid;
-    border-color: #000 #191919 #191919 #000;
+    border-color: rgba(0,0,0,0.4) rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.4);
   }
 }
