@@ -2,7 +2,7 @@ code,kbd,pre{
   font-family: ui-monospace, Monaco, monospace;
 }
 pre{
-  background-color: ghostwhite;
+  background-color: rgba(190, 190, 255, 0.1);
   font-size: smaller;
   overflow: auto;
   padding: 1em;
