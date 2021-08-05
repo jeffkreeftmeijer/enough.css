@@ -1,7 +1,7 @@
-* enough.css
-  :PROPERTIES:
-  :CUSTOM_ID: enough.css
-  :END:
+#+title: enough.css
+#+export_file_name: README
+#+options: toc:nil
+
 enough.css is a tiny CSS framework with most of the styling you need for that blog of yours.
 
 #+begin_quote
