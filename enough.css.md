@@ -24,6 +24,7 @@ body{
   max-width: 35em;
   padding: 0 1em;
 }
+
 img, video{
   max-width: 100%;
   height: auto;
@@ -44,6 +45,7 @@ img, video{
 code,kbd,pre{
   font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
 }
+
 pre{
   background-color: ghostwhite;
   font-size: smaller;
@@ -67,11 +69,13 @@ pre{
     font-size: 20px;
   }
 }
+
 @media (max-width:740px){ /* (35 + 2) × 20 */
   body{
     font-size: 18px;
   }
 }
+
 @media (max-width:466px){ /* (35 + 2) × 18 × 0.7 */
   body{
     font-size: 16px;
@@ -93,6 +97,7 @@ table{
   border-collapse: collapse;
   width: 100%;
 }
+
 td, th{
   padding: 0.5em;
   border: 1px solid;

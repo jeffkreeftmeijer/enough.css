@@ -30,6 +30,7 @@ Some of the rules are duplicated across modules so they don't depend on each oth
     max-width: 35em;
     padding: 0 1em;
   }
+  
   img, video{
     max-width: 100%;
     height: auto;
@@ -53,6 +54,7 @@ Some of the rules are duplicated across modules so they don't depend on each oth
   code,kbd,pre{
     font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
   }
+  
   pre{
     background-color: ghostwhite;
     font-size: smaller;
@@ -79,11 +81,13 @@ Some of the rules are duplicated across modules so they don't depend on each oth
       font-size: 20px;
     }
   }
+  
   @media (max-width:740px){ /* (35 + 2) × 20 */
     body{
       font-size: 18px;
     }
   }
+  
   @media (max-width:466px){ /* (35 + 2) × 18 × 0.7 */
     body{
       font-size: 16px;
@@ -108,6 +112,7 @@ Some of the rules are duplicated across modules so they don't depend on each oth
     border-collapse: collapse;
     width: 100%;
   }
+  
   td, th{
     padding: 0.5em;
     border: 1px solid;

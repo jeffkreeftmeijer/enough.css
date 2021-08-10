@@ -4,6 +4,7 @@ body{
   max-width: 35em;
   padding: 0 1em;
 }
+
 img, video{
   max-width: 100%;
   height: auto;
