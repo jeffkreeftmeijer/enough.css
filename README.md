@@ -6,7 +6,7 @@ enough.css is a tiny CSS framework with most of the styling you need for that bl
 
 The base stylesheet is **118 bytes** minified. It comes with optional modules to (minimally) style code blocks and tables. It's responsive by default, but has a module to decrease font sizes on smaller screens for extra responsiveness. The whole package is **478 bytes** minified.
 
-[[[file:screenshot.png](https://jeffkreeftmeijer.github.io/enough.css/)]]
+[![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
 It's an experiment to see how little CSS a blog can get away with while still looking good and being readable on big and small screens. It styles pages without having to add extra markup like wrapper =<div>=s and CSS classes.
 
