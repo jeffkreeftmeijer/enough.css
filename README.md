@@ -8,7 +8,7 @@ The base stylesheet is **118 bytes** minified. It comes with optional modules to
 
 [![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
-It's an experiment to see how little CSS a blog can get away with while still looking good and being readable on big and small screens. It styles pages without having to add extra markup like wrapper =<div>=s and CSS classes.
+It's an experiment to see how little CSS a blog can get away with while still looking good and being readable on big and small screens. It styles pages without having to add extra markup like wrapper `<div>`​s and CSS classes.
 
 Besides the base style sheet, it comes modules for styling specific tags. These are included in `enough.min.css` by default, but you can build your own to save some bytes if your project doesn't need everything.
 
