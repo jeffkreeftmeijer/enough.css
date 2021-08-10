@@ -122,10 +122,12 @@ Some of the rules are duplicated across modules so they don't depend on each oth
    :PROPERTIES:
    :CUSTOM_ID: enough.min.css
    :END:
-#+begin_example
-  $ npm install
-  $ cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
-#+end_example
+
+#+begin_src shell :prologue npm install > /dev/null
+  cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
+#+end_src
+
+#+RESULTS:
 
 --------------
 

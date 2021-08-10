@@ -106,9 +106,8 @@ td, th{
 
 # enough.min.css
 
-```
-$ npm install
-$ cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
+```shell
+cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
 ```
 
 ---
