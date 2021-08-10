@@ -1,5 +1,9 @@
 #+title: enough.css
 #+options: toc:nil
+#+html_head: <link rel="stylesheet" href="enough.css"/>
+#+html_head: <link rel="stylesheet" href="enough.code.css"/>
+#+html_head: <link rel="stylesheet" href="enough.media.css"/>
+#+html_head: <link rel="stylesheet" href="enough.table.css"/>
 
 enough.css is a tiny CSS framework with most of the styling you need for that blog of yours.
 
