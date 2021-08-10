@@ -17,6 +17,19 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 
 # enough.css
 
+```css
+body{
+  font: 22px/1.6 system-ui, sans-serif;
+  margin: auto;
+  max-width: 35em;
+  padding: 0 1em;
+}
+img, video{
+  max-width: 100%;
+  height: auto;
+}
+```
+
 -   Increases the font size to 22px
 -   Uses `system-ui` if available, or falls back to a sans-serif font
 -   Uses a 1.6em `line-height`
@@ -27,6 +40,18 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 
 # enough.code.css
 
+```css
+code,kbd,pre{
+  font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
+}
+pre{
+  background-color: ghostwhite;
+  font-size: smaller;
+  overflow: auto;
+  padding: 1em;
+}
+```
+
 -   Uses a `smaller` font-size in `<pre>` tags
 -   Uses `ui-monospace` (which is SF Mono on [Safari ≥ 13.1](https://caniuse.com/extended-system-fonts)), `SFMono-Regular` (SF Mono on Chrome) or Monaco as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back to the system's monospace font
 -   Adds an overflow to `<pre>` tags so long lines show horizontal scroll bars
@@ -36,6 +61,24 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 
 # enough.media.css
 
+```css
+@media (max-width:1140px){ /* (35 + 2) × 22 × 1.4 */
+  body{
+    font-size: 20px;
+  }
+}
+@media (max-width:740px){ /* (35 + 2) × 20 */
+  body{
+    font-size: 18px;
+  }
+}
+@media (max-width:466px){ /* (35 + 2) × 18 × 0.7 */
+  body{
+    font-size: 16px;
+  }
+}
+```
+
 | Maximum viewport width | Body font size | Max. viewport calculation |
 |---------------------- |-------------- |------------------------- |
 | 1140px                 | 20px           | (35em + 2em) × 22px × 1.4 |
@@ -44,6 +87,17 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 
 
 # enough.table.css
+
+```css
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th{
+  padding: 0.5em;
+  border: 1px solid;
+}
+```
 
 -   Adds a 100% `width` to tables.
 -   Uses a 0.5em padding in table cells
