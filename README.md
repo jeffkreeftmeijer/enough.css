@@ -10,7 +10,7 @@ blog of yours.
 The base stylesheet is **183 bytes** minified. It comes with optional modules
 to (minimally) style code blocks and tables. It's responsive by default, but
 has a module to decrease font sizes on smaller screens for extra
-responsiveness. The whole package is **463 bytes** minified.
+responsiveness. The whole package is **478 bytes** minified.
 
 [![enough.css](screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -38,9 +38,9 @@ other, but [cssnano](https://cssnano.co) takes them out when minifying.
 ## enough.code.css
 
 - Uses a `smaller` font-size in `<pre>` tags
-- Uses `ui-monospace` (which is SF Mono on [Safari ≥ 13.1](https://caniuse.com/extended-system-fonts))
-  or Monaco as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back
-  to the system's monospace font
+- Uses `ui-monospace` (which is SF Mono on [Safari ≥ 13.1](https://caniuse.com/extended-system-fonts)),
+  `SFMono-Regular` (SF Mono on Chrome) or Monaco as the font in `<pre>`,
+  `<code>`, and `<kbd>` tags, or falls back to the system's monospace font
 - Adds an overflow to `<pre>` tags so long lines show horizontal scroll bars
 - Adds a 1em padding to `<pre>` tags
 - Adds a `ghostwhite` background color to `<pre>` tags
