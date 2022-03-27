@@ -18,7 +18,7 @@ It's an experiment to see how little CSS a blog can get away with while still
 looking good and being readable on big and small screens. It styles pages
 without having to add extra markup like wrapper `<div>`s and CSS classes.
 
-Besides the base style sheet, it comes modules for styling specific
+Besides the base style sheet, it comes with modules for styling specific
 tags. These are included in `enough.min.css` by default, but you can build your
 own to save some bytes if your project doesn't need everything.
 
