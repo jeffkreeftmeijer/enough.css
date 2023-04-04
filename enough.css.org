@@ -32,8 +32,8 @@ Some of the rules are duplicated across modules so they don't depend on each oth
   body{
     font: 22px/1.6 system-ui, sans-serif;
     margin: auto;
-    max-width: 35em;
     padding: 0 1em;
+    max-width: 40em;
   }
   
   img, video{
@@ -45,7 +45,7 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 - Increases the font size to 22px
 - Uses =system-ui= if available, or falls back to a sans-serif font
 - Uses a 1.6em =line-height=
-- Makes the body 35em wide with 1em left- and right paddings, and centers it
+- Makes the body 40em wide with 1em left- and right paddings, and centers it
 - Adds a 100% =max-width= to images and videos, so they can't overflow.
 - Sets image height to =auto= to resize proportionally when width and height are set
 
