@@ -61,18 +61,14 @@ Some of the rules are duplicated across modules so they don't depend on each oth
   }
   
   pre{
-    background-color: ghostwhite;
     font-size: smaller;
     overflow: auto;
-    padding: 1em;
   }
 #+end_src
 
 - Uses a =smaller= font-size in =<pre>= tags
 - Uses =ui-monospace= (which is SF Mono on [[https://caniuse.com/extended-system-fonts][Safari ≥ 13.1]]), =SFMono-Regular= (SF Mono on Chrome) or Monaco as the font in =<pre>=, =<code>=, and =<kbd>= tags, or falls back to the system's monospace font
 - Adds an overflow to =<pre>= tags so long lines show horizontal scroll bars
-- Adds a 1em padding to =<pre>= tags
-- Adds a =ghostwhite= background color to =<pre>= tags
 
 ** enough.media.css
    :PROPERTIES:

@@ -3,8 +3,6 @@ code,kbd,pre{
 }
 
 pre{
-  background-color: ghostwhite;
   font-size: smaller;
   overflow: auto;
-  padding: 1em;
 }
