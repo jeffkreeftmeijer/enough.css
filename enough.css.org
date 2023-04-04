@@ -1,5 +1,6 @@
 #+title: enough.css
-#+options: toc:nil
+#+html_doctype: html5
+#+options: toc:nil num:nil html-style:nil html-postamble:nil
 #+html_head: <link rel="stylesheet" href="enough.css"/>
 #+html_head: <link rel="stylesheet" href="enough.code.css"/>
 #+html_head: <link rel="stylesheet" href="enough.media.css"/>
