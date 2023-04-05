@@ -1,5 +1,8 @@
+html{
+  font: clamp(16px, 2.2vw, 22px)/1.5 ui-serif, system-ui, sans-serif;
+}
+
 body{
-  font: 22px/1.6 system-ui, sans-serif;
   margin: auto;
   padding: 0 2em;
   max-width: 40em;

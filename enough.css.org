@@ -3,7 +3,6 @@
 #+options: toc:nil num:nil html-style:nil html-postamble:nil
 #+html_head: <link rel="stylesheet" href="enough.css"/>
 #+html_head: <link rel="stylesheet" href="enough.code.css"/>
-#+html_head: <link rel="stylesheet" href="enough.media.css"/>
 #+html_head: <link rel="stylesheet" href="enough.table.css"/>
 
 enough.css is a tiny CSS framework with most of the styling you need for that blog of yours.
@@ -29,8 +28,11 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 
 #+headers: :tangle enough.css
 #+begin_src css
+  html{
+    font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
+  }
+
   body{
-    font: 22px/1.6 system-ui, sans-serif;
     margin: auto;
     padding: 0 2em;
     max-width: 40em;
@@ -70,38 +72,6 @@ Some of the rules are duplicated across modules so they don't depend on each oth
 - Uses =ui-monospace= (which is SF Mono on [[https://caniuse.com/extended-system-fonts][Safari ≥ 13.1]]), =SFMono-Regular= (SF Mono on Chrome) or Monaco as the font in =<pre>=, =<code>=, and =<kbd>= tags, or falls back to the system's monospace font
 - Adds an overflow to =<pre>= tags so long lines show horizontal scroll bars
 
-** enough.media.css
-   :PROPERTIES:
-   :CUSTOM_ID: enough.media.css
-   :END:
-
-#+headers: :tangle enough.media.css
-#+begin_src css
-  @media (max-width:1140px){ /* (35 + 2) × 22 × 1.4 */
-    body{
-      font-size: 20px;
-    }
-  }
-  
-  @media (max-width:740px){ /* (35 + 2) × 20 */
-    body{
-      font-size: 18px;
-    }
-  }
-  
-  @media (max-width:466px){ /* (35 + 2) × 18 × 0.7 */
-    body{
-      font-size: 16px;
-    }
-  }
-#+end_src
-
-| Maximum viewport width | Body font size | Max. viewport calculation |
-|------------------------+----------------+---------------------------|
-| 1140px                 | 20px           | (35em + 2em) × 22px × 1.4 |
-| 740px                  | 18px           | (35em + 2em) × 20px       |
-| 466px                  | 16px           | (35em + 2em) × 18px × 0.7 |
-
 ** enough.table.css
    :PROPERTIES:
    :CUSTOM_ID: enough.table.css
@@ -130,7 +100,7 @@ Some of the rules are duplicated across modules so they don't depend on each oth
    :END:
 
 #+begin_src shell :prologue npm install > /dev/null
-  cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
+  cat enough.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
 #+end_src
 
 #+RESULTS:
