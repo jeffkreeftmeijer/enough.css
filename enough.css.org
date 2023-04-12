@@ -26,12 +26,30 @@ Some of the rules are duplicated across modules so they don't depend on each oth
    :CUSTOM_ID: enough.css-1
    :END:
 
+* Font
+
+Most, if not all, browsers default to /Times New Roman/ as the typeface, with a font size of 16 pixels and a line height of 125 %.
+Enough.css produces larger, responsive text in a modern typeface, with more spacing between lines:
+
 #+headers: :tangle enough.css
 #+begin_src css
   html{
     font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
   }
+#+end_src
 
+Smaller font sizes are great for 14″ monitors with low resolutions, but produce text that's uncomfortable to read on modern displays.
+Enough.css uses CSS's =clamp()= function to produce a font size that matches 2.2% of the viewport width with a 16-pixel minimum and a 22 pixel maximum.
+In practice, this means a 16 pixel font size for phones, maximum screen usage on tablets and a responsive font size that's configurable by resizing the window on desktop.
+
+The preferred font family is /system-ui/, which points to the operating system's default font.
+This produces text in Apple's /San Fransisco/ font on macOS and iOS, and falls back to a sans-serif font on other platforms.
+
+Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
+
+
+#+headers: :tangle enough.css
+#+begin_src css
   body{
     margin: auto;
     padding: 0 2em;
@@ -44,9 +62,6 @@ Some of the rules are duplicated across modules so they don't depend on each oth
   }
 #+end_src
 
-- Increases the font size to 22px
-- Uses =system-ui= if available, or falls back to a sans-serif font
-- Uses a 1.6em =line-height=
 - Makes the body 40em wide with 2em left- and right paddings, and centers it
 - Adds a 100% =max-width= to images and videos, so they can't overflow.
 - Sets image height to =auto= to resize proportionally when width and height are set
