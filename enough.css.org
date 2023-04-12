@@ -87,7 +87,7 @@ Setting an automatic height makes sure the images or videos keep their aspect ra
 
 Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
 
-#+headers: :tangle enough.code.css
+#+headers: :tangle enough.css
 #+begin_src css
   code,kbd,pre{
     font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
@@ -115,7 +115,7 @@ If a code block doesn't fit the page body, a scroll bar is displayed instead of 
 Tables take the full width of the page and have collapsed borders around each cell.
 Each cell also has a slight padding to give the data some breathing room:
 
-#+headers: :tangle enough.table.css
+#+headers: :tangle enough.css
 #+begin_src css
   table{
     border-collapse: collapse;
@@ -141,7 +141,7 @@ The /border-collapse/ property is used to combine the borders of adjacent cells.
    :END:
 
 #+begin_src shell :prologue npm install > /dev/null
-  cat enough.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
+  cat enough.css | node_modules/.bin/cssnano > enough.min.css
 #+end_src
 
 #+RESULTS:

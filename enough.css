@@ -12,3 +12,21 @@ img, video{
   max-width: 100%;
   height: auto;
 }
+
+code,kbd,pre{
+  font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
+}
+
+pre{
+  overflow: auto;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th{
+  padding: 0.5em;
+  border: 1px solid;
+}
