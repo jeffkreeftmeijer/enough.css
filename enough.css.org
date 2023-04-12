@@ -25,8 +25,9 @@ Some of the rules are duplicated across modules so they don't depend on each oth
    :PROPERTIES:
    :CUSTOM_ID: enough.css-1
    :END:
+* Features
 
-* Font
+** Font
 
 Most, if not all, browsers default to /Times New Roman/ as the typeface, with a font size of 16 pixels and a line height of 125 %.
 Enough.css produces larger, responsive text in a modern typeface, with more spacing between lines:
@@ -47,7 +48,7 @@ This produces text in Apple's /San Fransisco/ font on macOS and iOS, and falls b
 
 Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
 
-* Body width and padding
+** Body width and padding
 
 Enough.css adds a maximum width to pages to keep lines from running too long, with padding that ensures there's always some space between the text and the sides of the page, even if the window is resized:
 
@@ -67,7 +68,7 @@ If the window is wider than 968 pixels, the side paddings increase to keep the b
 If the window is narrower, the body also becomes narrower.
 The padding remains at 2 em, but reduces in size because of responsive font sizing.
 
-* Image and video widths
+** Image and video widths
 
 To keep images and video tags from overflowing and producing horizontal scroll bars, enough.css caps their widths to 100 % of the body width:
 
@@ -82,7 +83,7 @@ To keep images and video tags from overflowing and producing horizontal scroll b
 Doing this automatically scales images and videos down to fit the page.
 Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
-* Code
+** Code
 
 Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
 
@@ -109,7 +110,7 @@ The 0.85 rem size gives enough space for roughly 74 characters on bigger screens
 
 If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
-* Tables
+** Tables
 
 Tables take the full width of the page and have collapsed borders around each cell.
 Each cell also has a slight padding to give the data some breathing room:
