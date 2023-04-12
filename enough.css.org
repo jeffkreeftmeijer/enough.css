@@ -47,6 +47,9 @@ This produces text in Apple's /San Fransisco/ font on macOS and iOS, and falls b
 
 Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
 
+* Body width and padding
+
+Enough.css adds a maximum width to pages to keep lines from running too long, with padding that ensures there's always some space between the text and the sides of the page, even if the window is resized:
 
 #+headers: :tangle enough.css
 #+begin_src css
@@ -55,14 +58,23 @@ Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel
     padding: 0 2em;
     max-width: 40em;
   }
-  
+#+end_src
+
+A 40 em page width produces an 880-pixel wide page if for a 22 pixel font size, fitting around 85 characters per line.
+A 2 em padding is added to the sides, which produces 44 pixels on each size for a 22 pixel font size, which are added to the page's width.
+
+If the window is wider than 968 pixels, the side paddings increase to keep the body in the center of the window.
+If the window is narrower, the body also becomes narrower.
+The padding remains at 2 em, but reduces in size because of responsive font sizing.
+
+#+headers: :tangle enough.css
+#+begin_src css
   img, video{
-    max-width: 100%;
-    height: auto;
+      max-width: 100%;
+      height: auto;
   }
 #+end_src
 
-- Makes the body 40em wide with 2em left- and right paddings, and centers it
 - Adds a 100% =max-width= to images and videos, so they can't overflow.
 - Sets image height to =auto= to resize proportionally when width and height are set
 
