@@ -84,22 +84,30 @@ Setting an automatic height makes sure the images or videos keep their aspect ra
 
 * Code
 
+Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
 
 #+headers: :tangle enough.code.css
 #+begin_src css
   code,kbd,pre{
-      font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
+    font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
   }
 
   pre{
-      font-size: smaller;
-      overflow: auto;
+    overflow: auto;
   }
 #+end_src
 
-- Uses a =smaller= font-size in =<pre>= tags
-- Uses =ui-monospace= (which is SF Mono on [[https://caniuse.com/extended-system-fonts][Safari ≥ 13.1]]), =SFMono-Regular= (SF Mono on Chrome) or Monaco as the font in =<pre>=, =<code>=, and =<kbd>= tags, or falls back to the system's monospace font
-- Adds an overflow to =<pre>= tags so long lines show horizontal scroll bars
+Enough.css switches code elements to the /ui-monospace/ font family, which is Apple's /SF Mono/ font in Safari on macOS and iOS.
+For other browsers, /SFMono-Regular/ (works on Chrome on macOS) and /Monaco/ are tried before falling back to the default monospace font.
+
+The font size is reduced to 0.85 /rem/.
+The rem unit is used instead of em because it's relative to the font size set for the main =html= tag instead of the containing element.
+This makes sure the font size for code is always 85 % of the size for body text, even if a code block is nested in a =<pre>= tag.
+
+The font size for code is smaller to make it fit better in the flow of body text, but also to have enough room for code blocks within the width of the page body.
+The 0.85 rem size gives enough space for roughly 74 characters on bigger screens, and 36 characters on 375-pixel wide phones.
+
+If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
 ** enough.table.css
    :PROPERTIES:

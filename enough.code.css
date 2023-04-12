@@ -1,8 +1,7 @@
 code,kbd,pre{
-  font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
+  font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
 }
 
 pre{
-  font-size: smaller;
   overflow: auto;
 }
