@@ -109,10 +109,10 @@ The 0.85 rem size gives enough space for roughly 74 characters on bigger screens
 
 If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
-** enough.table.css
-   :PROPERTIES:
-   :CUSTOM_ID: enough.table.css
-   :END:
+* Tables
+
+Tables take the full width of the page and have collapsed borders around each cell.
+Each cell also has a slight padding to give the data some breathing room:
 
 #+headers: :tangle enough.table.css
 #+begin_src css
@@ -127,9 +127,12 @@ If a code block doesn't fit the page body, a scroll bar is displayed instead of 
   }
 #+end_src
 
-- Adds a 100% =width= to tables.
-- Uses a 0.5em padding in table cells
-- Adds collapsed, 1px borders
+By default, the width of tables is based on their contents.
+Enough.css stretches tables to have them fill the page width.
+
+Each table cell has a 1-pixel solid border, without a set color.
+Omitting the color reuses the body text color, which is black by default.
+The /border-collapse/ property is used to combine the borders of adjacent cells.
 
 ** enough.min.css
    :PROPERTIES:
