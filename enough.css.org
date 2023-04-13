@@ -142,7 +142,7 @@ The /border-collapse/ property is used to combine the borders of adjacent cells.
    :END:
 
 #+begin_src shell :prologue npm install > /dev/null
-  cat enough.css | node_modules/.bin/cssnano > enough.min.css
+  npx postcss enough.css > enough.min.css
 #+end_src
 
 #+RESULTS:
