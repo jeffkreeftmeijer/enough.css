@@ -166,6 +166,28 @@ Then, minify enough.css through npx:
   npx postcss enough.css > enough.min.css
 #+end_src
 
+** Git pre-commit hook
+
+The minified version of enough.css should always be kept up to date.
+As a convenience, it's recommended to set up the minification command as a git pre commit hook.
+A script for this is prepared in [[file:scripts/pre-commit][=scripts/pre-commit=]].
+To enable it as a pre-commit hook, symlink to it from git's hooks directory:
+
+#+headers: :exports none
+#+headers: :shebang #/bin/sh
+#+headers: :tangle scripts/pre-commit
+#+begin_src shell
+  npx postcss enough.css > enough.min.css
+#+end_src
+
+#+headers: :prologue rm .git/hooks/pre-commit
+#+begin_src shell
+  (cd .git/hooks && ln -s ../../scripts/pre-commit)
+#+end_src
+
+With the pre-commit hook set up, the minification command will be automatically run before changes are committed.
+To commit a change without running the hook, use the =--no-verify= flag.
+
 --------------
 
 - [[https://jeffkreeftmeijer.github.io/enough.css][Interactive Demo™]]
