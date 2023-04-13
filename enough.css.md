@@ -1,96 +1,118 @@
+
 # enough.css
 
-enough.css is a tiny CSS framework with most of the styling you need for that blog of yours.
+enough.css is a tiny (**307 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and accessible. You break them. &#x2014; <http://motherfuckingwebsite.com>
-
-The base stylesheet is **118 bytes** minified. It comes with optional modules to (minimally) style code blocks and tables. It's responsive by default, but has a module to decrease font sizes on smaller screens for extra responsiveness. The whole package is **478 bytes** minified.
 
 [![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
 It's an experiment to see how little CSS a blog can get away with while still looking good and being readable on big and small screens. It styles pages without having to add extra markup like wrapper `<div>`​s and CSS classes.
 
-Besides the base style sheet, it comes modules for styling specific tags. These are included in `enough.min.css` by default, but you can build your own to save some bytes if your project doesn't need everything.
 
-Some of the rules are duplicated across modules so they don't depend on each other, but [cssnano](https://cssnano.co) takes them out when minifying.
+# Table of Contents
+
+-   [Features](#org3a0e104)
+    -   [Font](#orgc0ff1e5)
+    -   [Body width and padding](#org3c1d0fa)
+    -   [Image and video widths](#orgeb5af92)
+    -   [Code](#org8a341f3)
+    -   [Tables](#orga52e00c)
+-   [Contributing](#orgd55c2ef)
+    -   [Minification](#org6fb0816)
+    -   [Git pre-commit hook](#org4d47f3b)
+    -   [Generating the Markdown README](#org156189a)
 
 
-# enough.css
+<a id="org3a0e104"></a>
+
+# Features
+
+
+<a id="orgc0ff1e5"></a>
+
+## Font
+
+Most, if not all, browsers default to *Times New Roman* as the typeface, with a font size of 16 pixels and a line height of 125 %. Enough.css produces larger, responsive text in a modern typeface, with more spacing between lines:
+
+```css
+html{
+  font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
+}
+```
+
+Smaller font sizes are great for 14″ monitors with low resolutions, but produce text that's uncomfortable to read on modern displays. Enough.css uses CSS's `clamp()` function to produce a font size that matches 2.2% of the viewport width with a 16-pixel minimum and a 22 pixel maximum. In practice, this means a 16 pixel font size for phones, maximum screen usage on tablets and a responsive font size that's configurable by resizing the window on desktop.
+
+The preferred font family is *system-ui*, which points to the operating system's default font. This produces text in Apple's *San Fransisco* font on macOS and iOS, and falls back to a sans-serif font on other platforms.
+
+Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
+
+
+<a id="org3c1d0fa"></a>
+
+## Body width and padding
+
+Enough.css adds a maximum width to pages to keep lines from running too long, with padding that ensures there's always some space between the text and the sides of the page, even if the window is resized:
 
 ```css
 body{
-  font: 22px/1.6 system-ui, sans-serif;
   margin: auto;
-  max-width: 35em;
-  padding: 0 1em;
+  padding: 0 2em;
+  max-width: 40em;
 }
+```
 
+A 40 em page width produces an 880-pixel wide page if for a 22 pixel font size, fitting around 85 characters per line. A 2 em padding is added to the sides, which produces 44 pixels on each size for a 22 pixel font size, which are added to the page's width.
+
+If the window is wider than 968 pixels, the side paddings increase to keep the body in the center of the window. If the window is narrower, the body also becomes narrower. The padding remains at 2 em, but reduces in size because of responsive font sizing.
+
+
+<a id="orgeb5af92"></a>
+
+## Image and video widths
+
+To keep images and video tags from overflowing and producing horizontal scroll bars, enough.css caps their widths to 100 % of the body width:
+
+```css
 img, video{
   max-width: 100%;
   height: auto;
 }
 ```
 
--   Increases the font size to 22px
--   Uses `system-ui` if available, or falls back to a sans-serif font
--   Uses a 1.6em `line-height`
--   Makes the body 35em wide with 1em left- and right paddings, and centers it
--   Adds a 100% `max-width` to images and videos, so they can't overflow.
--   Sets image height to `auto` to resize proportionally when width and height are set
+Doing this automatically scales images and videos down to fit the page. Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
 
-# enough.code.css
+<a id="org8a341f3"></a>
+
+## Code
+
+Code, either in `<code>` tags, `<kbd>` tags, or `<pre>` blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
 
 ```css
 code,kbd,pre{
-  font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
+  font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
 }
 
 pre{
-  background-color: ghostwhite;
-  font-size: smaller;
   overflow: auto;
-  padding: 1em;
 }
 ```
 
--   Uses a `smaller` font-size in `<pre>` tags
--   Uses `ui-monospace` (which is SF Mono on [Safari ≥ 13.1](https://caniuse.com/extended-system-fonts)), `SFMono-Regular` (SF Mono on Chrome) or Monaco as the font in `<pre>`, `<code>`, and `<kbd>` tags, or falls back to the system's monospace font
--   Adds an overflow to `<pre>` tags so long lines show horizontal scroll bars
--   Adds a 1em padding to `<pre>` tags
--   Adds a `ghostwhite` background color to `<pre>` tags
+Enough.css switches code elements to the *ui-monospace* font family, which is Apple's *SF Mono* font in Safari on macOS and iOS. For other browsers, *SFMono-Regular* (works on Chrome on macOS) and *Monaco* are tried before falling back to the default monospace font.
+
+The font size is reduced to 0.85 *rem*. The rem unit is used instead of em because it's relative to the font size set for the main `html` tag instead of the containing element. This makes sure the font size for code is always 85 % of the size for body text, even if a code block is nested in a `<pre>` tag.
+
+The font size for code is smaller to make it fit better in the flow of body text, but also to have enough room for code blocks within the width of the page body. The 0.85 rem size gives enough space for roughly 74 characters on bigger screens, and 36 characters on 375-pixel wide phones.
+
+If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
 
-# enough.media.css
+<a id="orga52e00c"></a>
 
-```css
-@media (max-width:1140px){ /* (35 + 2) × 22 × 1.4 */
-  body{
-    font-size: 20px;
-  }
-}
+## Tables
 
-@media (max-width:740px){ /* (35 + 2) × 20 */
-  body{
-    font-size: 18px;
-  }
-}
-
-@media (max-width:466px){ /* (35 + 2) × 18 × 0.7 */
-  body{
-    font-size: 16px;
-  }
-}
-```
-
-| Maximum viewport width | Body font size | Max. viewport calculation |
-|---------------------- |-------------- |------------------------- |
-| 1140px                 | 20px           | (35em + 2em) × 22px × 1.4 |
-| 740px                  | 18px           | (35em + 2em) × 20px       |
-| 466px                  | 16px           | (35em + 2em) × 18px × 0.7 |
-
-
-# enough.table.css
+Tables take the full width of the page and have collapsed borders around each cell. Each cell also has a slight padding to give the data some breathing room:
 
 ```css
 table{
@@ -104,16 +126,57 @@ td, th{
 }
 ```
 
--   Adds a 100% `width` to tables.
--   Uses a 0.5em padding in table cells
--   Adds collapsed, 1px borders
+By default, the width of tables is based on their contents. Enough.css stretches tables to have them fill the page width.
+
+Each table cell has a 1-pixel solid border, without a set color. Omitting the color reuses the body text color, which is black by default. The *border-collapse* property is used to combine the borders of adjacent cells.
 
 
-# enough.min.css
+<a id="orgd55c2ef"></a>
+
+# Contributing
+
+
+<a id="org6fb0816"></a>
+
+## Minification
+
+A minified version of enough.css is bundled in *enough.min.css* It's generated by passing the source file through [PostCSS](https://postcss.org), which is configured to use [cssnano](https://cssnano.co). Use NPM's install command to install the dependencies:
 
 ```shell
-cat enough.css enough.media.css enough.code.css enough.table.css | node_modules/.bin/cssnano > enough.min.css
+npm install
 ```
+
+Then, minify enough.css through npx:
+
+```shell
+npx postcss enough.css > enough.min.css
+```
+
+
+<a id="org4d47f3b"></a>
+
+## Git pre-commit hook
+
+The minified version of enough.css should always be kept up to date. As a convenience, it's recommended to set up the minification command as a git pre commit hook. A script for this is prepared in [`scripts/pre-commit`](scripts/pre-commit). To enable it as a pre-commit hook, symlink to it from git's hooks directory:
+
+```shell
+(cd .git/hooks && ln -s ../../scripts/pre-commit)
+```
+
+With the pre-commit hook set up, the minification command will be automatically run before changes are committed. To commit a change without running the hook, use the `--no-verify` flag.
+
+
+<a id="org156189a"></a>
+
+## Generating the Markdown README
+
+The main Org file is exported to Markdown for compatibility with Github, which is then symlinked as `README.md` to show on the repository's public page.
+
+```shell
+emacs --batch --load scripts/generate-markdown.el --funcall enough.css/generate-markdown
+```
+
+A GitHub workflow regenerates the Markdown whenever the main or develop branch receive changes. Therefor, local changes to the Markdown file shouldn't be pushed to the remote repository.
 
 ---
 
