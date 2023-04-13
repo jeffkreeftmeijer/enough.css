@@ -12,24 +12,24 @@ It's an experiment to see how little CSS a blog can get away with while still lo
 
 # Table of Contents
 
--   [Features](#orgab78e61)
-    -   [Font](#org8e4c22c)
-    -   [Body width and padding](#orga9a13cf)
-    -   [Image and video widths](#orge96ad07)
-    -   [Code](#org671b182)
-    -   [Tables](#orgd46737e)
--   [Contributing](#orgcb34b3c)
-    -   [Minification](#org9f2d669)
-    -   [Git pre-commit hook](#orgc14839d)
-    -   [Generating the Markdown README](#org3dfc112)
+-   [Features](#orgf4d6c28)
+    -   [Font](#org1a55556)
+    -   [Body width and padding](#org4e709f3)
+    -   [Image and video widths](#orge63954c)
+    -   [Code](#org3c3601d)
+    -   [Tables](#org3fb3af8)
+-   [Contributing](#org5be748b)
+    -   [Minification](#org6032540)
+    -   [Git pre-commit hook](#org2b198db)
+    -   [Generating the Markdown README](#org3a482fb)
 
 
-<a id="orgab78e61"></a>
+<a id="orgf4d6c28"></a>
 
 # Features
 
 
-<a id="org8e4c22c"></a>
+<a id="org1a55556"></a>
 
 ## Font
 
@@ -48,7 +48,7 @@ The preferred font family is *system-ui*, which points to the operating system's
 Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
 
 
-<a id="orga9a13cf"></a>
+<a id="org4e709f3"></a>
 
 ## Body width and padding
 
@@ -67,7 +67,7 @@ A 40 em page width produces an 880-pixel wide page if for a 22 pixel font size, 
 If the window is wider than 968 pixels, the side paddings increase to keep the body in the center of the window. If the window is narrower, the body also becomes narrower. The padding remains at 2 em, but reduces in size because of responsive font sizing.
 
 
-<a id="orge96ad07"></a>
+<a id="orge63954c"></a>
 
 ## Image and video widths
 
@@ -83,7 +83,7 @@ img, video{
 Doing this automatically scales images and videos down to fit the page. Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
 
-<a id="org671b182"></a>
+<a id="org3c3601d"></a>
 
 ## Code
 
@@ -108,7 +108,7 @@ The font size for code is smaller to make it fit better in the flow of body text
 If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
 
-<a id="orgd46737e"></a>
+<a id="org3fb3af8"></a>
 
 ## Tables
 
@@ -131,12 +131,12 @@ By default, the width of tables is based on their contents. Enough.css stretches
 Each table cell has a 1-pixel solid border, without a set color. Omitting the color reuses the body text color, which is black by default. The *border-collapse* property is used to combine the borders of adjacent cells.
 
 
-<a id="orgcb34b3c"></a>
+<a id="org5be748b"></a>
 
 # Contributing
 
 
-<a id="org9f2d669"></a>
+<a id="org6032540"></a>
 
 ## Minification
 
@@ -153,7 +153,7 @@ npx postcss enough.css > enough.min.css
 ```
 
 
-<a id="orgc14839d"></a>
+<a id="org2b198db"></a>
 
 ## Git pre-commit hook
 
@@ -166,7 +166,7 @@ The minified version of enough.css should always be kept up to date. As a conven
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed. To commit a change without running the hook, use the `--no-verify` flag.
 
 
-<a id="org3dfc112"></a>
+<a id="org3a482fb"></a>
 
 ## Generating the Markdown README
 
@@ -177,8 +177,3 @@ emacs --batch --load scripts/generate-markdown.el --funcall enough.css/generate-
 ```
 
 A GitHub workflow regenerates the Markdown whenever the main or develop branch receive changes. Therefor, local changes to the Markdown file shouldn't be pushed to the remote repository.
-
----
-
--   [Interactive Demo™](https://jeffkreeftmeijer.github.io/enough.css)
--   [Code](https://github.com/jeffkreeftmeijer/enough.css)
