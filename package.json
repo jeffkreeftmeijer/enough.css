@@ -1,5 +1,7 @@
 {
-  "dependencies": {
-    "cssnano-cli": "^1.0.5"
+  "devDependencies": {
+    "cssnano": "^6.0.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
   }
 }
