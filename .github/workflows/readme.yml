@@ -1,0 +1,22 @@
+name: README
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: purcell/setup-emacs@master
+        with:
+          version: 28.2
+      - run: emacs --batch --load scripts/generate-markdown.el --funcall enough.css/generate-markdown
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Regenerate enough.css.md

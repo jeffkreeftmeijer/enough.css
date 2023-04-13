@@ -196,6 +196,36 @@ The main Org file is exported to Markdown for compatibility with Github, which i
   emacs --batch --load scripts/generate-markdown.el --funcall enough.css/generate-markdown
 #+end_src
 
+A GitHub workflow regenerates the Markdown whenever the main or develop branch receive changes.
+Therefor, local changes to the Markdown file shouldn't be pushed to the remote repository.
+
+#+headers: :exports none
+#+headers: :tangle .github/workflows/readme.yml
+#+begin_src yaml
+name: README
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: purcell/setup-emacs@master
+        with:
+          version: 28.2
+      - run: emacs --batch --load scripts/generate-markdown.el --funcall enough.css/generate-markdown
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Regenerate enough.css.md
+#+end_src
+
 --------------
 
 - [[https://jeffkreeftmeijer.github.io/enough.css][Interactive Demo™]]
