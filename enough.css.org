@@ -22,10 +22,6 @@ Besides the base style sheet, it comes modules for styling specific tags. These 
 
 Some of the rules are duplicated across modules so they don't depend on each other, but [[https://cssnano.co][cssnano]] takes them out when minifying.
 
-** enough.css
-   :PROPERTIES:
-   :CUSTOM_ID: enough.css-1
-   :END:
 * Features
 
 ** Font
