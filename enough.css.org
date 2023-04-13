@@ -217,8 +217,3 @@ jobs:
         with:
           commit_message: Regenerate enough.css.md
 #+end_src
-
---------------
-
-- [[https://jeffkreeftmeijer.github.io/enough.css][Interactive Demo™]]
-- [[https://github.com/jeffkreeftmeijer/enough.css][Code]]
