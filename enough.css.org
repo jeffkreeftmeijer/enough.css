@@ -188,6 +188,14 @@ To enable it as a pre-commit hook, symlink to it from git's hooks directory:
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed.
 To commit a change without running the hook, use the =--no-verify= flag.
 
+** Generating the Markdown README
+
+The main Org file is exported to Markdown for compatibility with Github, which is then symlinked as =README.md= to show on the repository's public page.
+
+#+begin_src shell
+  emacs --batch --load scripts/generate-markdown.el --funcall enough.css/generate-markdown
+#+end_src
+
 --------------
 
 - [[https://jeffkreeftmeijer.github.io/enough.css][Interactive Demo™]]
