@@ -1,2 +1,3 @@
 #/bin/sh
-npx postcss enough.css > enough.min.css
+npx postcss enough.sans.css > enough.sans.min.css
+npx postcss enough.serif.css > enough.serif.min.css
