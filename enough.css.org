@@ -8,9 +8,6 @@
 
 enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the styling you need for that blog of yours.
 
-#+begin_quote
-  Websites aren't broken by default, they are functional, high-performing, and accessible. You break them. --- [[http://motherfuckingwebsite.com]]
-#+end_quote
 
 [[https://jeffkreeftmeijer.github.io/enough.css/][file:./screenshot.png]]
 
