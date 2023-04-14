@@ -2,10 +2,10 @@
 #+html_doctype: html5
 #+options: toc:nil num:nil html-style:nil html-postamble:nil
 #+html_head: <link rel="stylesheet" href="enough.sans.css"/>
-#+macro: bytes (eval (file-attribute-size (file-attributes "enough.sans.min.css")))
+#+macro: bytes-sans (eval (file-attribute-size (file-attributes "enough.sans.min.css")))
+#+macro: bytes-serif (eval (file-attribute-size (file-attributes "enough.serif.min.css")))
 
-enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the styling you need for that blog of yours.
-
+enough.css is a tiny (*{{{bytes-sans}}}--{{{bytes-serif}}} bytes!*) CSS framework with most of the styling you need for that blog of yours.
 
 [[https://jeffkreeftmeijer.github.io/enough.css/][file:./screenshot.png]]
 
