@@ -6,10 +6,9 @@
 #+macro: bytes-serif (eval (file-attribute-size (file-attributes "enough.serif.min.css")))
 
 enough.css is a tiny (*{{{bytes-sans}}}--{{{bytes-serif}}} bytes!*) CSS framework with most of the styling you need for that blog of yours.
+It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
 [[https://jeffkreeftmeijer.github.io/enough.css/][file:./screenshot.png]]
-
-It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
 #+TOC: headlines
 
