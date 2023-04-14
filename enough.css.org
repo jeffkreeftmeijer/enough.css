@@ -2,8 +2,6 @@
 #+html_doctype: html5
 #+options: toc:nil num:nil html-style:nil html-postamble:nil
 #+html_head: <link rel="stylesheet" href="enough.sans.css"/>
-#+html_head: <link rel="stylesheet" href="enough.code.css"/>
-#+html_head: <link rel="stylesheet" href="enough.table.css"/>
 #+macro: bytes (eval (file-attribute-size (file-attributes "enough.sans.min.css")))
 
 enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the styling you need for that blog of yours.
