@@ -154,6 +154,7 @@ Use NPM's install command to install the dependencies:
 
 Then, minify enough.css through npx:
 
+#+name: minify
 #+begin_src shell :prologue npm install > /dev/null
   npx postcss enough.css > enough.min.css
 #+end_src
@@ -167,9 +168,10 @@ To enable it as a pre-commit hook, symlink to it from git's hooks directory:
 
 #+headers: :exports none
 #+headers: :shebang #/bin/sh
+#+headers: :noweb yes
 #+headers: :tangle scripts/pre-commit
 #+begin_src shell
-  npx postcss enough.css > enough.min.css
+  <<minify>>
 #+end_src
 
 #+headers: :prologue rm .git/hooks/pre-commit
