@@ -3,8 +3,6 @@
 
 enough.css is a tiny (**307 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
-> Websites aren't broken by default, they are functional, high-performing, and accessible. You break them. &#x2014; <http://motherfuckingwebsite.com>
-
 [![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
 It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
@@ -12,24 +10,24 @@ It's an attempt to embrace the browser's default style sheets while adding some 
 
 ## Table of Contents
 
--   [Features](#org013388e)
-    -   [Font](#org3ba7584)
-    -   [Body width and padding](#org9a7600f)
-    -   [Image and video widths](#org90dcaaa)
-    -   [Code](#orga6b497c)
-    -   [Tables](#orgff158a9)
--   [Contributing](#org2f0552f)
-    -   [Minification](#org92d4083)
-    -   [Git pre-commit hook](#org4c43d22)
-    -   [Generating the Markdown README](#org0af9844)
+-   [Features](#org05cfbe3)
+    -   [Font](#orgbcca392)
+    -   [Body width and padding](#orge4760d7)
+    -   [Image and video widths](#org27909f9)
+    -   [Code](#org5ec1c7d)
+    -   [Tables](#org993b8f6)
+-   [Contributing](#orgb195ec3)
+    -   [Minification](#org9a9955d)
+    -   [Git pre-commit hook](#orgfe903fd)
+    -   [Generating the Markdown README](#org0d6be5f)
 
 
-<a id="org013388e"></a>
+<a id="org05cfbe3"></a>
 
 ## Features
 
 
-<a id="org3ba7584"></a>
+<a id="orgbcca392"></a>
 
 ### Font
 
@@ -48,7 +46,7 @@ The preferred font family is *system-ui*, which points to the operating system's
 Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
 
 
-<a id="org9a7600f"></a>
+<a id="orge4760d7"></a>
 
 ### Body width and padding
 
@@ -67,7 +65,7 @@ A 40 em page width produces an 880-pixel wide page if for a 22 pixel font size, 
 If the window is wider than 968 pixels, the side paddings increase to keep the body in the center of the window. If the window is narrower, the body also becomes narrower. The padding remains at 2 em, but reduces in size because of responsive font sizing.
 
 
-<a id="org90dcaaa"></a>
+<a id="org27909f9"></a>
 
 ### Image and video widths
 
@@ -83,7 +81,7 @@ img, video{
 Doing this automatically scales images and videos down to fit the page. Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
 
-<a id="orga6b497c"></a>
+<a id="org5ec1c7d"></a>
 
 ### Code
 
@@ -108,7 +106,7 @@ The font size for code is smaller to make it fit better in the flow of body text
 If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
 
-<a id="orgff158a9"></a>
+<a id="org993b8f6"></a>
 
 ### Tables
 
@@ -131,12 +129,12 @@ By default, the width of tables is based on their contents. Enough.css stretches
 Each table cell has a 1-pixel solid border, without a set color. Omitting the color reuses the body text color, which is black by default. The *border-collapse* property is used to combine the borders of adjacent cells.
 
 
-<a id="org2f0552f"></a>
+<a id="orgb195ec3"></a>
 
 ## Contributing
 
 
-<a id="org92d4083"></a>
+<a id="org9a9955d"></a>
 
 ### Minification
 
@@ -153,7 +151,7 @@ npx postcss enough.css > enough.min.css
 ```
 
 
-<a id="org4c43d22"></a>
+<a id="orgfe903fd"></a>
 
 ### Git pre-commit hook
 
@@ -166,7 +164,7 @@ The minified version of enough.css should always be kept up to date. As a conven
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed. To commit a change without running the hook, use the `--no-verify` flag.
 
 
-<a id="org0af9844"></a>
+<a id="org0d6be5f"></a>
 
 ### Generating the Markdown README
 
