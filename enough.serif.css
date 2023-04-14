@@ -1,0 +1,32 @@
+html{
+  font: clamp(16px, 2.2vw, 22px)/1.5 ui-serif, New York, Palatino, serif;
+}
+
+body{
+  margin: auto;
+  padding: 0 2em;
+  max-width: 40em;
+}
+
+img, video{
+  max-width: 100%;
+  height: auto;
+}
+
+code,kbd,pre{
+  font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
+}
+
+pre{
+  overflow: auto;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th{
+  padding: 0.5em;
+  border: 1px solid;
+}

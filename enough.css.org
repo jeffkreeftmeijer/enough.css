@@ -1,17 +1,14 @@
 #+title: enough.css
 #+html_doctype: html5
 #+options: toc:nil num:nil html-style:nil html-postamble:nil
-#+html_head: <link rel="stylesheet" href="enough.css"/>
-#+html_head: <link rel="stylesheet" href="enough.code.css"/>
-#+html_head: <link rel="stylesheet" href="enough.table.css"/>
-#+macro: bytes (eval (file-attribute-size (file-attributes "enough.min.css")))
+#+html_head: <link rel="stylesheet" href="enough.sans.css"/>
+#+macro: bytes-sans (eval (file-attribute-size (file-attributes "enough.sans.min.css")))
+#+macro: bytes-serif (eval (file-attribute-size (file-attributes "enough.serif.min.css")))
 
-enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the styling you need for that blog of yours.
-
+enough.css is a tiny (*{{{bytes-sans}}}--{{{bytes-serif}}} bytes!*) CSS framework with most of the styling you need for that blog of yours.
+It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
 [[https://jeffkreeftmeijer.github.io/enough.css/][file:./screenshot.png]]
-
-It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
 #+TOC: headlines
 
@@ -20,12 +17,27 @@ It's an attempt to embrace the browser's default style sheets while adding some 
 ** Font
 
 Most, if not all, browsers default to /Times New Roman/ as the typeface, with a font size of 16 pixels and a line height of 125 %.
-Enough.css produces larger, responsive text in a modern typeface, with more spacing between lines:
+Enough.css produces larger, responsive text in one of two modern typefaces, with more spacing between lines.
 
-#+headers: :tangle enough.css
+The first style, called =enough.sans.css= uses a sans-serif font.
+Its preferred font family is /system-ui/, which points to the operating system's default font.
+This produces text in Apple's /San Fransisco/ font on macOS and iOS, and falls back to a sans-serif font on other platforms:
+
+#+name: sans
 #+begin_src css
   html{
     font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
+  }
+#+end_src
+
+The second, called =enough.serif.css= uses a serif.
+Here, chosen font is /ui-serif/, which uses the operating system's default serif font.
+On macOS and iOS, that's Apple's /New York/, with a fallback to /Palatino/, or the default serif font:
+
+#+name: serif
+#+begin_src css
+  html{
+    font: clamp(16px, 2.2vw, 22px)/1.5 ui-serif, New York, Palatino, serif;
   }
 #+end_src
 
@@ -33,16 +45,13 @@ Smaller font sizes are great for 14″ monitors with low resolutions, but produc
 Enough.css uses CSS's =clamp()= function to produce a font size that matches 2.2% of the viewport width with a 16-pixel minimum and a 22 pixel maximum.
 In practice, this means a 16 pixel font size for phones, maximum screen usage on tablets and a responsive font size that's configurable by resizing the window on desktop.
 
-The preferred font family is /system-ui/, which points to the operating system's default font.
-This produces text in Apple's /San Fransisco/ font on macOS and iOS, and falls back to a sans-serif font on other platforms.
-
 Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
 
 ** Body width and padding
 
 Enough.css adds a maximum width to pages to keep lines from running too long, with padding that ensures there's always some space between the text and the sides of the page, even if the window is resized:
 
-#+headers: :tangle enough.css
+#+name: body
 #+begin_src css
   body{
     margin: auto;
@@ -62,7 +71,7 @@ The padding remains at 2 em, but reduces in size because of responsive font sizi
 
 To keep images and video tags from overflowing and producing horizontal scroll bars, enough.css caps their widths to 100 % of the body width:
 
-#+headers: :tangle enough.css
+#+name: img
 #+begin_src css
   img, video{
     max-width: 100%;
@@ -77,7 +86,7 @@ Setting an automatic height makes sure the images or videos keep their aspect ra
 
 Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
 
-#+headers: :tangle enough.css
+#+name: code
 #+begin_src css
   code,kbd,pre{
     font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
@@ -105,7 +114,7 @@ If a code block doesn't fit the page body, a scroll bar is displayed instead of 
 Tables take the full width of the page and have collapsed borders around each cell.
 Each cell also has a slight padding to give the data some breathing room:
 
-#+headers: :tangle enough.css
+#+name: table
 #+begin_src css
   table{
     border-collapse: collapse;
@@ -125,6 +134,36 @@ Each table cell has a 1-pixel solid border, without a set color.
 Omitting the color reuses the body text color, which is black by default.
 The /border-collapse/ property is used to combine the borders of adjacent cells.
 
+* Overview                                                         :noexport:
+
+#+headers: :tangle enough.sans.css
+#+headers: :noweb yes
+#+begin_src css
+  <<sans>>
+
+  <<body>>
+
+  <<img>>
+
+  <<code>>
+
+  <<table>>
+#+end_src
+
+#+headers: :tangle enough.serif.css
+#+headers: :noweb yes
+#+begin_src css
+  <<serif>>
+
+  <<body>>
+
+  <<img>>
+
+  <<code>>
+
+  <<table>>
+#+end_src
+
 * Contributing
 
 ** Minification
@@ -141,7 +180,7 @@ module.exports = {
 };
 #+end_src
 
-A minified version of enough.css is bundled in /enough.min.css/
+A minified version of enough.sans.css is bundled in /enough.sans.min.css/
 It's generated by passing the source file through [[https://postcss.org][PostCSS]], which is configured to use [[https://cssnano.co][cssnano]].
 Use NPM's install command to install the dependencies:
 
@@ -149,16 +188,17 @@ Use NPM's install command to install the dependencies:
   npm install
 #+end_src
 
-Then, minify enough.css through npx:
+Then, minify enough.sans.css through npx:
 
 #+name: minify
 #+begin_src shell :prologue npm install > /dev/null
-  npx postcss enough.css > enough.min.css
+  npx postcss enough.sans.css > enough.sans.min.css
+  npx postcss enough.serif.css > enough.serif.min.css
 #+end_src
 
 ** Git pre-commit hook
 
-The minified version of enough.css should always be kept up to date.
+The minified version of enough.sans.css should always be kept up to date.
 As a convenience, it's recommended to set up the minification command as a git pre commit hook.
 A script for this is prepared in [[file:scripts/pre-commit][=scripts/pre-commit=]].
 To enable it as a pre-commit hook, symlink to it from git's hooks directory:
