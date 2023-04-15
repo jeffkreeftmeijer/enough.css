@@ -1,7 +1,7 @@
 
 # enough.css
 
-enough.css is a tiny (**307 bytes**) CSS framework with most of the styling you need for that blog of yours.
+enough.css is a tiny (**317 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
 [![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -10,31 +10,31 @@ It's an attempt to embrace the browser's default style sheets while adding some 
 
 ## Table of Contents
 
--   [Features](#org05cfbe3)
-    -   [Font](#orgbcca392)
-    -   [Body width and padding](#orge4760d7)
-    -   [Image and video widths](#org27909f9)
-    -   [Code](#org5ec1c7d)
-    -   [Tables](#org993b8f6)
--   [Contributing](#orgb195ec3)
-    -   [Minification](#org9a9955d)
-    -   [Git pre-commit hook](#orgfe903fd)
-    -   [Generating the Markdown README](#org0d6be5f)
+-   [Features](#orgd3ef053)
+    -   [Font](#org76f7d8c)
+    -   [Body width and padding](#org8a3e7cb)
+    -   [Image and video widths](#orgbbb5dbc)
+    -   [Code](#org1218c16)
+    -   [Tables](#org971e85d)
+-   [Contributing](#org576e883)
+    -   [Minification](#org1716c66)
+    -   [Git pre-commit hook](#org6eb8e9c)
+    -   [Generating the Markdown README](#org68aab8b)
 
 
-<a id="org05cfbe3"></a>
+<a id="orgd3ef053"></a>
 
 ## Features
 
 
-<a id="orgbcca392"></a>
+<a id="org76f7d8c"></a>
 
 ### Font
 
 Most, if not all, browsers default to *Times New Roman* as the typeface, with a font size of 16 pixels and a line height of 125 %. Enough.css produces larger, responsive text in a modern typeface, with more spacing between lines:
 
 ```css
-html{
+body{
   font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
 }
 ```
@@ -46,7 +46,7 @@ The preferred font family is *system-ui*, which points to the operating system's
 Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
 
 
-<a id="orge4760d7"></a>
+<a id="org8a3e7cb"></a>
 
 ### Body width and padding
 
@@ -65,7 +65,7 @@ A 40 em page width produces an 880-pixel wide page if for a 22 pixel font size, 
 If the window is wider than 968 pixels, the side paddings increase to keep the body in the center of the window. If the window is narrower, the body also becomes narrower. The padding remains at 2 em, but reduces in size because of responsive font sizing.
 
 
-<a id="org27909f9"></a>
+<a id="orgbbb5dbc"></a>
 
 ### Image and video widths
 
@@ -81,32 +81,29 @@ img, video{
 Doing this automatically scales images and videos down to fit the page. Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
 
-<a id="org5ec1c7d"></a>
+<a id="org1218c16"></a>
 
 ### Code
 
 Code, either in `<code>` tags, `<kbd>` tags, or `<pre>` blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
 
 ```css
-code,kbd,pre{
-  font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
+code, kbd, pre{
+  font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
 }
 
 pre{
+  font-size: 0.8em;
   overflow: auto;
 }
 ```
 
 Enough.css switches code elements to the *ui-monospace* font family, which is Apple's *SF Mono* font in Safari on macOS and iOS. For other browsers, *SFMono-Regular* (works on Chrome on macOS) and *Monaco* are tried before falling back to the default monospace font.
 
-The font size is reduced to 0.85 *rem*. The rem unit is used instead of em because it's relative to the font size set for the main `html` tag instead of the containing element. This makes sure the font size for code is always 85 % of the size for body text, even if a code block is nested in a `<pre>` tag.
-
-The font size for code is smaller to make it fit better in the flow of body text, but also to have enough room for code blocks within the width of the page body. The 0.85 rem size gives enough space for roughly 74 characters on bigger screens, and 36 characters on 375-pixel wide phones.
-
-If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
+The font size is reduced to 0.8 em for preformatted code blocks The 0.85 rem size gives enough space for roughly 78 characters on bigger screens, and 34 characters on 375-pixel wide phones. If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
 
-<a id="org993b8f6"></a>
+<a id="org971e85d"></a>
 
 ### Tables
 
@@ -129,12 +126,12 @@ By default, the width of tables is based on their contents. Enough.css stretches
 Each table cell has a 1-pixel solid border, without a set color. Omitting the color reuses the body text color, which is black by default. The *border-collapse* property is used to combine the borders of adjacent cells.
 
 
-<a id="orgb195ec3"></a>
+<a id="org576e883"></a>
 
 ## Contributing
 
 
-<a id="org9a9955d"></a>
+<a id="org1716c66"></a>
 
 ### Minification
 
@@ -151,7 +148,7 @@ npx postcss enough.css > enough.min.css
 ```
 
 
-<a id="orgfe903fd"></a>
+<a id="org6eb8e9c"></a>
 
 ### Git pre-commit hook
 
@@ -164,7 +161,7 @@ The minified version of enough.css should always be kept up to date. As a conven
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed. To commit a change without running the hook, use the `--no-verify` flag.
 
 
-<a id="org0d6be5f"></a>
+<a id="org68aab8b"></a>
 
 ### Generating the Markdown README
 
