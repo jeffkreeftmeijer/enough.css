@@ -24,7 +24,7 @@ Enough.css produces larger, responsive text in a modern typeface, with more spac
 
 #+headers: :tangle enough.css
 #+begin_src css
-  html{
+  body{
     font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
   }
 #+end_src
