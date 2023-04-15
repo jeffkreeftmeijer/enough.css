@@ -13,11 +13,12 @@ img, video{
   height: auto;
 }
 
-code,kbd,pre{
-  font: 0.85rem ui-monospace, SFMono-Regular, Monaco, monospace;
+code, kbd, pre{
+  font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
 }
 
 pre{
+  font-size: 0.8em;
   overflow: auto;
 }
 
