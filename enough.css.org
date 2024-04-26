@@ -2,8 +2,6 @@
 #+html_doctype: html5
 #+options: toc:nil num:nil html-style:nil html-postamble:nil
 #+html_head: <link rel="stylesheet" href="enough.css"/>
-#+html_head: <link rel="stylesheet" href="enough.code.css"/>
-#+html_head: <link rel="stylesheet" href="enough.table.css"/>
 #+html_head: <meta name="color-scheme" content="light dark">
 #+macro: bytes (eval (file-attribute-size (file-attributes "enough.min.css")))
 
