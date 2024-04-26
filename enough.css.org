@@ -17,8 +17,6 @@ enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the stylin
 
 It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
-#+TOC: headlines
-
 * Features
 
 ** Font
