@@ -27,7 +27,7 @@ Enough.css produces larger, responsive text in a modern typeface, with more spac
 
 #+headers: :tangle enough.css
 #+begin_src css
-  body{
+  html{
     font: calc(1em + 0.25vw)/1.5 system-ui, sans-serif;
   }
 #+end_src
@@ -94,10 +94,7 @@ Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different
 #+begin_src css
   code, kbd, pre{
     font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
-  }
-
-  pre{
-    font-size: 0.9em;
+    font-size: 0.9rem;
     overflow: auto;
   }
 #+end_src
@@ -105,7 +102,7 @@ Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different
 Enough.css switches code elements to the /ui-monospace/ font family, which is Apple's /SF Mono/ font in Safari on macOS and iOS.
 For other browsers, /SFMono-Regular/ (works on Chrome on macOS) and /Monaco/ are tried before falling back to the default monospace font.
 
-The font size is reduced to 0.9 em for preformatted code blocks
+The font size is reduced to 0.9 em for code blocks and tags.
 The 0.9 em size gives enough space for roughly 70 characters on bigger screens, and 40 characters on most phones.
 If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 

@@ -1,4 +1,4 @@
-body{
+html{
   font: calc(1em + 0.25vw)/1.5 system-ui, sans-serif;
 }
 
@@ -15,10 +15,7 @@ img, video{
 
 code, kbd, pre{
   font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
-}
-
-pre{
-  font-size: 0.9em;
+  font-size: 0.9rem;
   overflow: auto;
 }
 
