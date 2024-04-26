@@ -1,52 +1,43 @@
 
 # enough.css
 
-enough.css is a tiny (**317 bytes**) CSS framework with most of the styling you need for that blog of yours.
+enough.css is a tiny (**335 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
 [![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
 It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
 
-## Table of Contents
-
--   [Features](#orgd3ef053)
-    -   [Font](#org76f7d8c)
-    -   [Body width and padding](#org8a3e7cb)
-    -   [Image and video widths](#orgbbb5dbc)
-    -   [Code](#org1218c16)
-    -   [Tables](#org971e85d)
--   [Contributing](#org576e883)
-    -   [Minification](#org1716c66)
-    -   [Git pre-commit hook](#org6eb8e9c)
-    -   [Generating the Markdown README](#org68aab8b)
-
-
-<a id="orgd3ef053"></a>
-
 ## Features
 
-
-<a id="org76f7d8c"></a>
 
 ### Font
 
 Most, if not all, browsers default to *Times New Roman* as the typeface, with a font size of 16 pixels and a line height of 125 %. Enough.css produces larger, responsive text in a modern typeface, with more spacing between lines:
 
 ```css
-body{
-  font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
+html{
+  font: calc(1em + 0.25vw)/1.5 system-ui, sans-serif;
 }
 ```
 
-Smaller font sizes are great for 14″ monitors with low resolutions, but produce text that's uncomfortable to read on modern displays. Enough.css uses CSS's `clamp()` function to produce a font size that matches 2.2% of the viewport width with a 16-pixel minimum and a 22 pixel maximum. In practice, this means a 16 pixel font size for phones, maximum screen usage on tablets and a responsive font size that's configurable by resizing the window on desktop.
+Smaller font sizes are great for 14″ monitors with low resolutions, but produce text that's uncomfortable to read on modern displays.
+
+Enough.css uses CSS's `calc()` function to produce a font size based on the browser default, plus 0.25 % of the viewport width through the `vw` unit. That produces the following font sizes:
+
+| Window width | Body font size |
+|------------ |-------------- |
+| 1600 px      | 20 px          |
+| 1200 px      | 19 px          |
+| 800 px       | 18 px          |
+| 400 px       | 17 px          |
+
+In practice, this means a font size of around 17 pixels on phones, maximum screen usage on tablets and a responsive font size that's configurable by resizing the window on desktop.
 
 The preferred font family is *system-ui*, which points to the operating system's default font. This produces text in Apple's *San Fransisco* font on macOS and iOS, and falls back to a sans-serif font on other platforms.
 
-Finally, the line height is 150 %, producing a 33 pixel line height for 22 pixel body text.
+Finally, the line height is 150 %, producing a 30 pixel line height for 20 pixel body text.
 
-
-<a id="org8a3e7cb"></a>
 
 ### Body width and padding
 
@@ -65,8 +56,6 @@ A 40 em page width produces an 880-pixel wide page if for a 22 pixel font size, 
 If the window is wider than 968 pixels, the side paddings increase to keep the body in the center of the window. If the window is narrower, the body also becomes narrower. The padding remains at 2 em, but reduces in size because of responsive font sizing.
 
 
-<a id="orgbbb5dbc"></a>
-
 ### Image and video widths
 
 To keep images and video tags from overflowing and producing horizontal scroll bars, enough.css caps their widths to 100 % of the body width:
@@ -81,29 +70,28 @@ img, video{
 Doing this automatically scales images and videos down to fit the page. Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
 
-<a id="org1218c16"></a>
-
 ### Code
 
-Code, either in `<code>` tags, `<kbd>` tags, or `<pre>` blocks, uses a different typeface, a smaller font, and scroll bars when overflowing:
+Code, either in `<code>` tags, `<kbd>` tags, or `<pre>` blocks, uses a different typeface and a smaller font, and scroll bars when overflowing:
 
 ```css
 code, kbd, pre{
   font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
+  font-size: 0.9rem;
 }
 
 pre{
-  font-size: 0.8em;
+  margin-left: 40px;
   overflow: auto;
 }
 ```
 
 Enough.css switches code elements to the *ui-monospace* font family, which is Apple's *SF Mono* font in Safari on macOS and iOS. For other browsers, *SFMono-Regular* (works on Chrome on macOS) and *Monaco* are tried before falling back to the default monospace font.
 
-The font size is reduced to 0.8 em for preformatted code blocks The 0.85 rem size gives enough space for roughly 78 characters on bigger screens, and 34 characters on 375-pixel wide phones. If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
+Preformatted text in `<pre>` tags get a 40 pixel left margin, to match the left margin in lists, block quotes and figures. This makes code blocks stand out from body text without adding a background color.
 
+The font size is reduced to 0.9 em for both code blocks and tags. The 0.9 em size gives enough space for roughly 70 characters on bigger screens, and 40 characters on most phones. If a code block doesn't fit the page body, a scroll bar is displayed instead of overflowing.
 
-<a id="org971e85d"></a>
 
 ### Tables
 
@@ -126,12 +114,8 @@ By default, the width of tables is based on their contents. Enough.css stretches
 Each table cell has a 1-pixel solid border, without a set color. Omitting the color reuses the body text color, which is black by default. The *border-collapse* property is used to combine the borders of adjacent cells.
 
 
-<a id="org576e883"></a>
-
 ## Contributing
 
-
-<a id="org1716c66"></a>
 
 ### Minification
 
@@ -148,8 +132,6 @@ npx postcss enough.css > enough.min.css
 ```
 
 
-<a id="org6eb8e9c"></a>
-
 ### Git pre-commit hook
 
 The minified version of enough.css should always be kept up to date. As a convenience, it's recommended to set up the minification command as a git pre commit hook. A script for this is prepared in [`scripts/pre-commit`](scripts/pre-commit). To enable it as a pre-commit hook, symlink to it from git's hooks directory:
@@ -160,8 +142,6 @@ The minified version of enough.css should always be kept up to date. As a conven
 
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed. To commit a change without running the hook, use the `--no-verify` flag.
 
-
-<a id="org68aab8b"></a>
 
 ### Generating the Markdown README
 
