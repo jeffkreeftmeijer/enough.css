@@ -1,5 +1,5 @@
 body{
-  font: clamp(16px, 2.2vw, 22px)/1.5 system-ui, sans-serif;
+  font: calc(1em + 0.25vw)/1.5 system-ui, sans-serif;
 }
 
 body{
