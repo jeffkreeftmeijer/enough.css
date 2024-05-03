@@ -218,7 +218,7 @@ jobs:
           fetch-depth: 0
       - uses: purcell/setup-emacs@master
         with:
-          version: 28.2
+          version: 29.3
       - run: <<generate-readme>>
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
