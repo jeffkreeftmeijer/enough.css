@@ -14,7 +14,7 @@
             devShells.default = pkgs.mkShell {
               buildInputs = with pkgs; [
                 emacs-nox
-                lightningcss
+                minify
               ];
             };
           });
