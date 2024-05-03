@@ -1,2 +1,2 @@
 #/bin/sh
-lightningcss --minify enough.css > enough.min.css
+lightningcss --minify enough.css | tr -d "\n" > enough.min.css
