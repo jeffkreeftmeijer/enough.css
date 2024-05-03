@@ -94,19 +94,12 @@ Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different
   code, kbd, pre{
     font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
     font-size: 0.9rem;
-  }
-
-  pre{
-    margin-left: 40px;
     overflow: auto;
   }
 #+end_src
 
 Enough.css switches code elements to the /ui-monospace/ font family, which is Apple's /SF Mono/ font in Safari on macOS and iOS.
 For other browsers, /SFMono-Regular/ (works on Chrome on macOS) and /Monaco/ are tried before falling back to the default monospace font.
-
-Preformatted text in =<pre>= tags get a 40 pixel left margin, to match the left margin in lists, block quotes and figures.
-This makes code blocks stand out from body text without adding a background color.
 
 The font size is reduced to 0.9 em for both code blocks and tags.
 The 0.9 em size gives enough space for roughly 70 characters on bigger screens, and 40 characters on most phones.

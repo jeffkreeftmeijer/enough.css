@@ -16,10 +16,6 @@ img, video{
 code, kbd, pre{
   font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
   font-size: 0.9rem;
-}
-
-pre{
-  margin-left: 40px;
   overflow: auto;
 }
 
