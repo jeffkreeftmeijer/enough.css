@@ -56,17 +56,17 @@ Enough.css adds a maximum width to pages to keep lines from running too long, wi
 #+begin_src css
   body{
     margin: auto;
-    padding: 0 2em;
+    padding: 0 1em;
     max-width: 40em;
   }
 #+end_src
 
 A 40 em page width produces an 800-pixel wide page if for a 20 pixel font size, fitting around 85 characters per line.
-A 2 em padding is added to the sides, which produces 40 pixels on each side for a 20 pixel font size, which are added to the page's width.
+A 1 em padding is added to the sides, which produces 20 pixels on each side for a 20 pixel font size, which are added to the page's width.
 
 As the window becomes wider, the side paddings increase to keep the body in the center of the window.
 If the window is narrower, the body also becomes narrower.
-The padding remains at 2 em, but reduces in size because of responsive font sizing.
+The padding remains at 1 em, but reduces in size because of responsive font sizing.
 
 ** Image and video widths
 
