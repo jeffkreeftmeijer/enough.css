@@ -90,14 +90,14 @@ Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different
 #+headers: :tangle enough.css
 #+begin_src css
   code, kbd, pre{
-    font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
+    font-family: ui-monospace, monospace;
     font-size: 0.8rem;
     overflow: auto;
   }
 #+end_src
 
 Enough.css switches code elements to the /ui-monospace/ font family, which is Apple's /SF Mono/ font in Safari on macOS and iOS.
-For other browsers, /SFMono-Regular/ (works on Chrome on macOS) and /Monaco/ are tried before falling back to the default monospace font.
+Otherwise, it falls back to the system's /monospace/ font.
 
 The font size is reduced to 0.8 em for both code blocks and tags.
 The 0.8 em size gives enough space for roughly 80 characters on bigger screens, and 50 characters on most phones.
