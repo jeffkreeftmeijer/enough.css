@@ -25,7 +25,7 @@ Enough.css produces larger, responsive text in a modern typeface, with more spac
 #+headers: :tangle enough.css
 #+begin_src css
   html{
-    font: calc(1em + 0.25vw)/1.5 system-ui, sans-serif;
+    font: calc(1em + 0.25vw)/1.4 system-ui, sans-serif;
   }
 #+end_src
 
@@ -46,7 +46,7 @@ In practice, this means a font size of around 17 pixels on phones, maximum scree
 The preferred font family is /system-ui/, which points to the operating system's default font.
 This produces text in Apple's /San Fransisco/ font on macOS and iOS, and falls back to a sans-serif font on other platforms.
 
-Finally, the line height is 150 %, producing a 30 pixel line height for 20 pixel body text.
+Finally, the line height is 140 %, producing a 28 pixel line height for 20 pixel body text.
 
 ** Body width and padding
 
