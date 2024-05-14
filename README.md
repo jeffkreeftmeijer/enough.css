@@ -1,7 +1,7 @@
 
 # enough.css
 
-enough.css is a tiny (**314 bytes**) CSS framework with most of the styling you need for that blog of yours.
+enough.css is a tiny (**318 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
 [![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
@@ -17,7 +17,7 @@ Most, if not all, browsers default to *Times New Roman* as the typeface, with a 
 
 ```css
 html{
-  font: calc(1em + 0.25vw)/1.5 system-ui, sans-serif;
+  font: calc(1em + 0.25vw)/1.4 system-ui, sans-serif;
 }
 ```
 
@@ -76,9 +76,16 @@ Code, either in `<code>` tags, `<kbd>` tags, or `<pre>` blocks, uses a different
 
 ```css
 code, kbd, pre{
-  font-family: ui-monospace, SFMono-Regular, Monaco, monospace;
-  font-size: 0.8rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.8em;
+}
+
+pre {
   overflow: auto;
+}
+
+pre > code{
+  font-size: 1em;
 }
 ```
 
