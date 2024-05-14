@@ -14,9 +14,16 @@ img, video{
 }
 
 code, kbd, pre{
-  font-size: 0.8rem;
   font-family: ui-monospace, monospace;
+  font-size: 0.8em;
+}
+
+pre {
   overflow: auto;
+}
+
+pre > code{
+  font-size: 1em;
 }
 
 table{

@@ -91,8 +91,15 @@ Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different
 #+begin_src css
   code, kbd, pre{
     font-family: ui-monospace, monospace;
-    font-size: 0.8rem;
+    font-size: 0.8em;
+  }
+
+  pre {
     overflow: auto;
+  }
+
+  pre > code{
+    font-size: 1em;
   }
 #+end_src
 
