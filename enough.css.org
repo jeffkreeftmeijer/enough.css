@@ -40,6 +40,7 @@ That produces the following font sizes:
 | 1200 px      | 19 px          |
 | 800 px       | 18 px          |
 | 400 px       | 17 px          |
+#+TBLFM: $2=16 px+$1*0.0025;%d px
 
 In practice, this means a font size of around 17 pixels on phones, maximum screen usage on tablets and a responsive font size that's configurable by resizing the window on desktop.
 
