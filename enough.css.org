@@ -216,3 +216,7 @@ jobs:
         with:
           commit_message: Regenerate README.md
 #+end_src
+
+# ;; Local Variables:
+# ;; eval: (add-hook 'after-save-hook 'org-babel-tangle)
+# ;; End:
