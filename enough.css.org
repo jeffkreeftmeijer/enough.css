@@ -15,12 +15,14 @@ enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the stylin
 
 It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
 
+#+toc: headlines
+
 * Features
 :PROPERTIES:
 :CUSTOM_ID: features
 :END:
 
-** Font
+** Font family, size and line height
 :PROPERTIES:
 :CUSTOM_ID: font
 :END:
@@ -96,7 +98,7 @@ To keep images and video tags from overflowing and producing horizontal scroll b
 Doing this automatically scales images and videos down to fit the page.
 Setting an automatic height makes sure the images or videos keep their aspect ratio, even if they're resized.
 
-** Code
+** Code tags and blocks
 :PROPERTIES:
 :CUSTOM_ID: code
 :END:
