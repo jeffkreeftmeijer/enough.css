@@ -20,6 +20,8 @@ code, kbd, pre{
 
 pre {
   overflow: auto;
+  border: 1px inset;
+  padding: 1em;
 }
 
 pre > code{

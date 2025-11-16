@@ -85,7 +85,8 @@ Setting an automatic height makes sure the images or videos keep their aspect ra
 
 ** Code
 
-Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different typeface and a smaller font, and scroll bars when overflowing:
+Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a monospace typeface and a smaller font.
+=<pre>= blocks have an outline, some padding, and scroll bars when overflowing.
 
 #+headers: :tangle enough.css
 #+begin_src css
@@ -96,6 +97,8 @@ Code, either in =<code>= tags, =<kbd>= tags, or =<pre>= blocks, uses a different
 
   pre {
     overflow: auto;
+    border: 1px inset;
+    padding: 1em;
   }
 
   pre > code{
