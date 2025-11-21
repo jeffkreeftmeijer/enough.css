@@ -5,9 +5,9 @@ enough.css is a tiny (**347 bytes**) CSS framework with most of the styling you 
 
 > Websites aren't broken by default, they are functional, high-performing, and accessible. You break them. &#x2014; <http://motherfuckingwebsite.com>
 
-[![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
-
 It's an attempt to embrace the browser's default style sheets while adding some minor changes to aid readability and responsiveness.
+
+[![img](./screenshot.png)](https://jeffkreeftmeijer.github.io/enough.css/)
 
 
 ## Table of Contents
