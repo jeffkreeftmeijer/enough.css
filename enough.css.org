@@ -203,52 +203,6 @@ To enable it as a pre-commit hook, symlink to it from git's hooks directory:
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed.
 To commit a change without running the hook, use the =--no-verify= flag.
 
-** Generating the Markdown README
-:PROPERTIES:
-:CUSTOM_ID: generate-readme
-:END:
-
-This project uses [[https://github.com/jeffkreeftmeijer/readme.el][readme.el]] to export the main Org file to a Markdown README for compatibility with GitHub, to show on the repository's public page:
-
-#+name: generate-readme
-#+begin_src shell
-  emacs --batch enough.css.org --load scripts/readme.el/readme.el --eval "(readme/to-markdown \"README.md\")"
-#+end_src
-
-A GitHub workflow regenerates the Markdown whenever the main or develop branch receive changes.
-Therefor, local changes to the Markdown file shouldn't be pushed to the remote repository.
-
-#+headers: :exports none
-#+headers: :noweb yes
-#+headers: :tangle .github/workflows/readme.yml
-#+begin_src yaml
-name: README
-
-on:
-  push:
-    branches: [ "main", "develop" ]
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
-      - uses: purcell/setup-emacs@master
-        with:
-          version: 29.3
-      - run: <<generate-readme>>
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Regenerate README.md
-#+end_src
-
 # ;; Local Variables:
 # ;; eval: (add-hook 'after-save-hook 'org-babel-tangle)
 # ;; End:
