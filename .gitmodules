@@ -1,3 +1,0 @@
-[submodule "scripts/readme.el"]
-	path = scripts/readme.el
-	url = https://github.com/jeffkreeftmeijer/readme.el.git
