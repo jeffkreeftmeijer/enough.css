@@ -21,7 +21,6 @@ It's an attempt to embrace the browser's default style sheets while adding some 
 -   [Contributing](#contributing)
     -   [Minification](#minification)
     -   [Git pre-commit hook](#pre-commit)
-    -   [Generating the Markdown README](#generate-readme)
 
 
 <a id="features"></a>
@@ -172,16 +171,3 @@ The minified version of enough.css should always be kept up to date. As a conven
 ```
 
 With the pre-commit hook set up, the minification command will be automatically run before changes are committed. To commit a change without running the hook, use the `--no-verify` flag.
-
-
-<a id="generate-readme"></a>
-
-### Generating the Markdown README
-
-This project uses [readme.el](https://github.com/jeffkreeftmeijer/readme.el) to export the main Org file to a Markdown README for compatibility with GitHub, to show on the repository's public page:
-
-```shell
-emacs --batch enough.css.org --load scripts/readme.el/readme.el --eval "(readme/to-markdown \"README.md\")"
-```
-
-A GitHub workflow regenerates the Markdown whenever the main or develop branch receive changes. Therefor, local changes to the Markdown file shouldn't be pushed to the remote repository.
