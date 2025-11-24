@@ -1,8 +1,9 @@
-#+title: enough.css
-#+html_doctype: html5
-#+options: toc:nil num:nil html-style:nil html-postamble:nil
-#+html_head: <link rel="stylesheet" href="enough.css"/>
-#+html_head: <meta name="color-scheme" content="light dark">
+:PROPERTIES:
+:ID:       b7be5ca8-f998-410b-9864-c1e0a0ad0be0
+:END:
+#+title: enough.css: A tiny CSS framework with most of the styling you need for that blog of yours
+#+author: Jeff Kreeftmeijer
+#+date: 2017-01-02
 #+macro: bytes (eval (file-attribute-size (file-attributes "enough.min.css")))
 
 enough.css is a tiny (*{{{bytes}}} bytes*) CSS framework with most of the styling you need for that blog of yours.
