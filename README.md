@@ -1,16 +1,6 @@
 
 # enough.css
 
-- [Features](#features)
-  - [Font family, size and line height](#font)
-  - [Body width and padding](#body)
-  - [Image and video widths](#image)
-  - [Code tags and blocks](#code)
-  - [Tables](#table)
-- [Contributing](#contributing)
-  - [Minification](#minification)
-  - [Git pre-commit hook](#pre-commit)
-
 enough.css is a tiny (**347 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
 > Websites aren't broken by default, they are functional, high-performing, and accessible. You break them. &#x2014; <http://motherfuckingwebsite.com>
