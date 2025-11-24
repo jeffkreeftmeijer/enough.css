@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       b7be5ca8-f998-410b-9864-c1e0a0ad0be0
 :END:
-#+title: enough.css: A tiny CSS framework with most of the styling you need for that blog of yours
+#+title: enough.css
 #+author: Jeff Kreeftmeijer
 #+date: 2017-01-02
 #+macro: bytes (eval (file-attribute-size (file-attributes "enough.min.css")))

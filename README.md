@@ -1,5 +1,5 @@
 
-# enough.css: A tiny CSS framework with most of the styling you need for that blog of yours
+# enough.css
 
 - [Features](#features)
   - [Font family, size and line height](#font)
