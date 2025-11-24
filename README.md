@@ -1,5 +1,15 @@
 
-# enough.css
+# enough.css: A tiny CSS framework with most of the styling you need for that blog of yours
+
+- [Features](#features)
+  - [Font family, size and line height](#font)
+  - [Body width and padding](#body)
+  - [Image and video widths](#image)
+  - [Code tags and blocks](#code)
+  - [Tables](#table)
+- [Contributing](#contributing)
+  - [Minification](#minification)
+  - [Git pre-commit hook](#pre-commit)
 
 enough.css is a tiny (**347 bytes**) CSS framework with most of the styling you need for that blog of yours.
 
@@ -12,15 +22,15 @@ It's an attempt to embrace the browser's default style sheets while adding some 
 
 ## Table of Contents
 
--   [Features](#features)
-    -   [Font family, size and line height](#font)
-    -   [Body width and padding](#body)
-    -   [Image and video widths](#image)
-    -   [Code tags and blocks](#code)
-    -   [Tables](#table)
--   [Contributing](#contributing)
-    -   [Minification](#minification)
-    -   [Git pre-commit hook](#pre-commit)
+1.  [Features](#features)
+    1.  [Font family, size and line height](#font)
+    2.  [Body width and padding](#body)
+    3.  [Image and video widths](#image)
+    4.  [Code tags and blocks](#code)
+    5.  [Tables](#table)
+2.  [Contributing](#contributing)
+    1.  [Minification](#minification)
+    2.  [Git pre-commit hook](#pre-commit)
 
 
 <a id="features"></a>
