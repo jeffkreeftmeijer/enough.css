@@ -166,6 +166,9 @@ The /border-collapse/ property is used to combine the borders of adjacent cells.
 :CUSTOM_ID: contributing
 :END:
 
+The git repository for enough.css is hosted [[https://github.com/jeffkreeftmeijer/enough.css][GitHub]].
+Fork the project to update enough.css to your liking, and please contribute general improvements back to the project.
+
 ** Minification
 :PROPERTIES:
 :CUSTOM_ID: minification
