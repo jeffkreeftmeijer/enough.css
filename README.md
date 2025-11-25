@@ -148,6 +148,8 @@ Each table cell has a 1-pixel solid border, without a set color. Omitting the co
 
 ## Contributing
 
+The git repository for enough.css is hosted [GitHub](https://github.com/jeffkreeftmeijer/enough.css). Fork the project to update enough.css to your liking, and please contribute general improvements back to the project.
+
 
 <a id="minification"></a>
 
